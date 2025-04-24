@@ -1,9 +1,8 @@
-
 import React from 'react';
 
 const Footer: React.FC = () => {
   return (
-    <footer className="py-12 px-4 md:px-6 bg-gradient-to-b from-analyst-lightblue to-analyst-gray">
+    <footer className="py-12 px-4 md:px-6 bg-gradient-to-b from-analyst-lightblue to-analyst-gray dark:from-slate-800 dark:to-slate-900">
       <div className="max-w-7xl mx-auto">
         <div className="flex flex-col md:flex-row justify-between items-center">
           <div className="mb-6 md:mb-0">

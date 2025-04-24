@@ -1,25 +1,24 @@
-
 import React from 'react';
 import { Card, CardContent } from "@/components/ui/card";
 import { ChartBarBig, FileSpreadsheet, Database } from 'lucide-react';
 
 const Stats: React.FC = () => {
   return (
-    <section className="py-16 px-4 md:px-6 bg-gradient-to-br from-analyst-lightblue to-white">
+    <section className="py-16 px-4 md:px-6 bg-gradient-to-br from-analyst-lightblue to-white dark:from-analyst-darkblue dark:to-analyst-navy">
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           <StatCard 
-            icon={<ChartBarBig className="h-10 w-10 text-analyst-teal" />}
+            icon={<ChartBarBig className="h-10 w-10 text-analyst-teal dark:text-analyst-darkteal" />}
             number="50+"
             label="Data Analysis Projects"
           />
           <StatCard 
-            icon={<FileSpreadsheet className="h-10 w-10 text-analyst-teal" />}
+            icon={<FileSpreadsheet className="h-10 w-10 text-analyst-teal dark:text-analyst-darkteal" />}
             number="15M+"
             label="Data Points Analyzed"
           />
           <StatCard 
-            icon={<Database className="h-10 w-10 text-analyst-teal" />}
+            icon={<Database className="h-10 w-10 text-analyst-teal dark:text-analyst-darkteal" />}
             number="8+"
             label="Years Experience"
           />
@@ -37,7 +36,7 @@ interface StatCardProps {
 
 const StatCard: React.FC<StatCardProps> = ({ icon, number, label }) => {
   return (
-    <Card className="border-none shadow-md stat-animation">
+    <Card className="border-none shadow-md stat-animation dark:bg-gradient-to-br dark:from-slate-800 dark:to-slate-900">
       <CardContent className="pt-6 flex flex-col items-center justify-center text-center p-6">
         <div className="mb-4">
           {icon}

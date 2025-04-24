@@ -59,7 +59,8 @@ export default {
           lightblue: '#EBF8FF',
           gray: '#E2E8F0',
           darkblue: '#0F172A',
-          darkteal: '#1D4044'
+          darkteal: '#1D4044',
+          darknavy: '#1a202c'
         },
         sidebar: {
           DEFAULT: 'hsl(var(--sidebar-background))',

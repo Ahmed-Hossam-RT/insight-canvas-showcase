@@ -73,21 +73,21 @@ interface ProjectCardProps {
 
 const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
   return (
-    <Card className={`border project-card bg-gradient-to-br ${project.gradient}`}>
+    <Card className={`border project-card dark:bg-gradient-to-br dark:from-slate-800 dark:to-slate-900 ${project.gradient}`}>
       <CardHeader>
         <div className="mb-2">{project.icon}</div>
         <CardTitle>{project.title}</CardTitle>
-        <CardDescription className="text-foreground/70">{project.description}</CardDescription>
+        <CardDescription className="text-foreground/70 dark:text-foreground/60">{project.description}</CardDescription>
       </CardHeader>
       <CardContent>
         <div className="flex flex-wrap gap-2">
           {project.skills.map((skill, index) => (
-            <Badge key={index} variant="secondary">{skill}</Badge>
+            <Badge key={index} variant="secondary" className="dark:bg-slate-700">{skill}</Badge>
           ))}
         </div>
       </CardContent>
       <CardFooter>
-        <Button variant="ghost" size="sm">View Details</Button>
+        <Button variant="ghost" size="sm" className="dark:text-foreground/70 dark:hover:text-foreground">View Details</Button>
       </CardFooter>
     </Card>
   );
