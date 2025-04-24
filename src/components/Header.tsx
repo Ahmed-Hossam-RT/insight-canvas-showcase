@@ -7,9 +7,9 @@ const Header: React.FC = () => {
     <header className="py-6 px-4 md:px-6 flex items-center justify-between w-full max-w-7xl mx-auto">
       <div className="flex items-center space-x-2">
         <div className="h-8 w-8 bg-analyst-teal rounded-md flex items-center justify-center">
-          <span className="text-white font-bold text-lg">D</span>
+          <span className="text-white font-bold text-lg">A</span>
         </div>
-        <span className="font-bold text-xl">DataAnalyst</span>
+        <span className="font-bold text-xl">Ahmed Hossam</span>
       </div>
       <nav className="hidden md:flex items-center space-x-8">
         <a href="#about" className="text-foreground hover:text-primary transition-colors">About</a>

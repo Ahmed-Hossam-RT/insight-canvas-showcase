@@ -1,6 +1,7 @@
 
 import React from 'react';
 import { Button } from "@/components/ui/button";
+import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 import { ChartBar, ChartPie } from 'lucide-react';
 
 const Hero: React.FC = () => {
@@ -8,13 +9,20 @@ const Hero: React.FC = () => {
     <section id="about" className="py-20 px-4 md:px-6 flex flex-col items-center text-center">
       <div className="animate-fade-in max-w-4xl mx-auto">
         <div className="flex justify-center mb-8">
-          <div className="h-32 w-32 rounded-full bg-gradient-to-br from-analyst-blue to-analyst-teal flex items-center justify-center">
-            <span className="text-white text-4xl font-bold">JD</span>
-          </div>
+          <Avatar className="h-32 w-32">
+            <AvatarImage 
+              src="/placeholder.svg" 
+              alt="Ahmed Hossam Profile Photo" 
+              className="object-cover rounded-full"
+            />
+            <AvatarFallback className="bg-gradient-to-br from-analyst-blue to-analyst-teal">
+              <span className="text-white text-4xl font-bold">AH</span>
+            </AvatarFallback>
+          </Avatar>
         </div>
         <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
           <span>Hi, I'm </span>
-          <span className="highlight-gradient">Jane Doe</span>
+          <span className="highlight-gradient">Ahmed Hossam</span>
         </h1>
         <h2 className="text-2xl md:text-3xl font-medium mb-6 text-muted-foreground">
           Data Analyst & Visualization Expert
