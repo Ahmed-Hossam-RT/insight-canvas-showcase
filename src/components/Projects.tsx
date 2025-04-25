@@ -3,6 +3,7 @@ import React from 'react';
 import ContentSection from './ContentSection';
 import { Button } from "@/components/ui/button";
 import { DownloadCloud } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const projectsData = [
   {
@@ -36,9 +37,12 @@ const Projects: React.FC = () => {
         <div className="flex justify-center pb-12">
           <Button 
             className="bg-analyst-orange hover:bg-analyst-burntorange text-white dark:bg-analyst-orange dark:hover:bg-analyst-burntorange"
+            asChild
           >
-            <DownloadCloud className="mr-2 h-4 w-4" />
-            View All Projects
+            <Link to="/projects">
+              <DownloadCloud className="mr-2 h-4 w-4" />
+              View All Projects
+            </Link>
           </Button>
         </div>
       </div>
