@@ -53,12 +53,11 @@ export default {
           foreground: "hsl(var(--card-foreground))",
         },
         analyst: {
-          sapphire: '#0A2463',  // Primary Deep Sapphire Blue
-          cyan: '#00E5FF',      // Secondary Electric Cyan
-          charcoal: '#1A1A1A',  // Dark Mode Base
-          magenta: '#FF00FF',   // Accent Neon Magenta
-          softmagenta: '#CC00CC', // Softer Magenta for dark mode
-          gray: '#E0E0E0',      // Neutral Cool Gray
+          orange: '#FF6B35',      // Primary Vibrant Orange
+          burntorange: '#CC5500', // Accent Burnt Orange
+          black: '#000000',       // Secondary Jet Black
+          darkgrey: '#2D2D2D',    // Tertiary Dark Grey
+          lightgrey: '#E5E5E5',   // Neutral Light Grey
         },
       },
       borderRadius: {

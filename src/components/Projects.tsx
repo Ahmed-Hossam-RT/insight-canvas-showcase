@@ -8,21 +8,21 @@ const projectsData = [
   {
     id: "1",
     title: "Marketing Analytics Dashboard",
-    type: "data",
+    type: "data" as const,
     content: "Interactive dashboard showing key marketing metrics and ROI analysis",
     date: "2024-04-20"
   },
   {
     id: "2",
     title: "Customer Segmentation Report",
-    type: "document",
+    type: "document" as const,
     content: "Detailed analysis of customer segments based on behavior patterns",
     date: "2024-04-15"
   },
   {
     id: "3",
     title: "Sales Performance Visualization",
-    type: "image",
+    type: "image" as const,
     content: "Visual representation of quarterly sales performance across regions",
     date: "2024-04-10"
   }
@@ -30,12 +30,12 @@ const projectsData = [
 
 const Projects: React.FC = () => {
   return (
-    <div className="bg-white dark:bg-analyst-charcoal">
+    <div className="bg-background dark:bg-analyst-darkgrey">
       <div className="max-w-7xl mx-auto">
         <ContentSection title="Featured Projects" items={projectsData} />
         <div className="flex justify-center pb-12">
           <Button 
-            className="bg-analyst-magenta hover:bg-analyst-magenta/90 dark:bg-analyst-softmagenta"
+            className="bg-analyst-orange hover:bg-analyst-burntorange text-white dark:bg-analyst-orange dark:hover:bg-analyst-burntorange"
           >
             <DownloadCloud className="mr-2 h-4 w-4" />
             View All Projects
