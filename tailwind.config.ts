@@ -55,8 +55,8 @@ export default {
         analyst: {
           orange: '#FF6B35',      // Primary Vibrant Orange
           burntorange: '#CC5500', // Accent Burnt Orange
-          black: '#000000',       // Secondary Jet Black
-          darkgrey: '#2D2D2D',    // Tertiary Dark Grey
+          black: '#1A1A1A',       // Slightly lighter jet black
+          darkgrey: '#353535',    // Lighter dark grey
           lightgrey: '#E5E5E5',   // Neutral Light Grey
         },
       },
