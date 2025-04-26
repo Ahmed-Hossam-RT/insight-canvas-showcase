@@ -1,10 +1,14 @@
-
 import React from 'react';
 import { Button } from "@/components/ui/button";
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 import { ChartBar, ChartPie } from 'lucide-react';
 
 const Hero: React.FC = () => {
+  const scrollToWork = () => {
+    const element = document.getElementById('work');
+    element?.scrollIntoView({ behavior: 'smooth' });
+  };
+
   return (
     <section id="about" className="py-20 px-4 md:px-6 flex flex-col items-center text-center bg-gradient-to-br from-white to-analyst-gray/30 dark:from-analyst-charcoal dark:to-analyst-sapphire">
       <div className="animate-fade-in max-w-4xl mx-auto">
@@ -34,7 +38,8 @@ const Hero: React.FC = () => {
         <div className="flex flex-wrap items-center justify-center gap-4">
           <Button 
             size="lg" 
-            className="bg-analyst-magenta hover:bg-analyst-magenta/90 dark:bg-analyst-softmagenta dark:hover:bg-analyst-softmagenta/90 text-white"
+            className="bg-gradient-to-r from-analyst-orange to-analyst-burntorange hover:opacity-90 transition-opacity text-white"
+            onClick={scrollToWork}
           >
             <ChartPie size={18} />
             View My Work
