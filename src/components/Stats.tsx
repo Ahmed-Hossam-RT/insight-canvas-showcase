@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Card, CardContent } from "@/components/ui/card";
 import { Briefcase, Award, SlidersHorizontal } from 'lucide-react';
@@ -16,7 +15,7 @@ const StatCard: React.FC<{
         whileHover={{ scale: 1.05 }}
         transition={{ type: "spring", stiffness: 300 }}
       >
-        <Card className="border-none shadow-md hover:shadow-xl transition-all duration-300 bg-gradient-to-br from-analyst-orange to-analyst-darkgrey cursor-pointer">
+        <Card className="border-none shadow-md hover:shadow-xl transition-all duration-300 bg-gradient-to-br from-analyst-orange to-analyst-darkgrey hover:from-analyst-burntorange hover:to-analyst-black cursor-pointer">
           <CardContent className="pt-6 flex flex-col items-center justify-center text-center p-6 min-h-[200px]">
             <div className="mb-4 text-white">
               {icon}
@@ -33,7 +32,7 @@ const StatCard: React.FC<{
 
 const Stats: React.FC = () => {
   return (
-    <section id="work" className="py-16 px-4 md:px-6 bg-gradient-to-br from-white to-analyst-gray/30 dark:from-analyst-charcoal dark:to-analyst-sapphire">
+    <section id="work" className="py-16 px-4 md:px-6 bg-gradient-to-br from-analyst-black to-analyst-darkgrey">
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           <StatCard 
