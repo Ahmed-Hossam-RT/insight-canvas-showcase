@@ -39,14 +39,14 @@ const CertificateFilters: React.FC<CertificateFiltersProps> = ({ onFilterChange 
   return (
     <div className="mb-10">
       <div className="flex items-center gap-2 mb-5">
-        <Filter className="h-5 w-5 text-analyst-orange" />
-        <h2 className="text-2xl font-medium text-white">Filter Certificates</h2>
+        <Filter className="h-5 w-5 text-primary" />
+        <h2 className="text-2xl font-medium">Filter Certificates</h2>
         {activeFilters.length > 0 && (
           <Button 
             variant="ghost" 
             size="sm" 
             onClick={clearFilters}
-            className="ml-auto text-analyst-lightgrey hover:text-analyst-orange"
+            className="ml-auto text-muted-foreground hover:text-primary"
           >
             Clear
           </Button>
@@ -61,8 +61,8 @@ const CertificateFilters: React.FC<CertificateFiltersProps> = ({ onFilterChange 
             variant={activeFilters.includes(domain) ? "default" : "outline"}
             className={
               activeFilters.includes(domain)
-                ? "bg-analyst-orange hover:bg-analyst-burntorange text-white"
-                : "border-analyst-lightgrey/30 hover:border-analyst-orange hover:text-analyst-orange text-white/80"
+                ? "bg-primary hover:bg-primary/90 text-white"
+                : "border-muted-foreground/30 hover:border-primary hover:text-primary"
             }
             onClick={() => toggleFilter(domain)}
           >

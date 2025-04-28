@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -53,11 +54,12 @@ export default {
           foreground: "hsl(var(--card-foreground))",
         },
         analyst: {
-          orange: '#FF6B35',      // Primary Vibrant Orange
-          burntorange: '#CC5500', // Accent Burnt Orange
-          black: '#1A1A1A',       // Slightly lighter jet black
-          darkgrey: '#353535',    // Lighter dark grey
-          lightgrey: '#E5E5E5',   // Neutral Light Grey
+          blue: '#0078D7',       // Primary Blue
+          darkblue: '#005A9E',   // Accent Dark Blue
+          lightblue: '#00BCF2',  // Accent Light Blue
+          navy: '#0A2463',       // Deep Navy
+          grey: '#647C90',       // Professional Grey
+          lightgrey: '#E5E5E5',  // Neutral Light Grey
         },
       },
       borderRadius: {
