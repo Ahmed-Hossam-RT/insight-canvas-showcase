@@ -5,7 +5,6 @@ import { useNavigate } from 'react-router-dom';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { Card, CardContent } from "@/components/ui/card";
-import { Progress } from "@/components/ui/progress";
 import { Button } from "@/components/ui/button";
 
 const SkillsPage = () => {
@@ -16,10 +15,10 @@ const SkillsPage = () => {
   };
 
   const skillsData = [
-    { name: "Data Analysis", level: 95, description: "Advanced proficiency in extracting insights from complex datasets using statistical methods and predictive modeling." },
-    { name: "SQL", level: 90, description: "Expertise in database querying, optimization, and complex data manipulation across various database management systems." },
-    { name: "Python", level: 85, description: "Comprehensive skills in data science libraries like Pandas, NumPy, and machine learning frameworks such as scikit-learn and TensorFlow." },
-    { name: "R Programming", level: 80, description: "Strong capabilities in statistical computing, data visualization, and advanced analytical techniques using R." }
+    { name: "Data Analysis", description: "Advanced proficiency in extracting insights from complex datasets using statistical methods and predictive modeling." },
+    { name: "SQL", description: "Expertise in database querying, optimization, and complex data manipulation across various database management systems." },
+    { name: "Python", description: "Comprehensive skills in data science libraries like Pandas, NumPy, and machine learning frameworks such as scikit-learn and TensorFlow." },
+    { name: "R Programming", description: "Strong capabilities in statistical computing, data visualization, and advanced analytical techniques using R." }
   ];
 
   return (
@@ -48,12 +47,8 @@ const SkillsPage = () => {
               <Card key={index} className="bg-gradient-to-br from-analyst-darkgrey to-analyst-black border-analyst-orange/20">
                 <CardContent className="pt-6">
                   <div className="space-y-3">
-                    <div className="flex justify-between items-center">
-                      <span className="font-medium text-white text-xl">{skill.name}</span>
-                      <span className="text-sm text-white/80">{skill.level}%</span>
-                    </div>
-                    <Progress value={skill.level} className="h-2" />
-                    <p className="text-white/70 text-sm">{skill.description}</p>
+                    <h3 className="font-medium text-white text-xl">{skill.name}</h3>
+                    <p className="text-white/70">{skill.description}</p>
                   </div>
                 </CardContent>
               </Card>

@@ -1,3 +1,4 @@
+
 import React from 'react';
 
 const Footer: React.FC = () => {
@@ -22,23 +23,13 @@ const Footer: React.FC = () => {
               <h3 className="font-medium mb-4">Connect</h3>
               <ul className="space-y-2">
                 <li>
-                  <a href="#linkedin" className="text-muted-foreground hover:text-foreground transition-colors">
+                  <a href="https://www.linkedin.com/in/ahmed-hossam-285b86241" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-foreground transition-colors">
                     LinkedIn
                   </a>
                 </li>
                 <li>
-                  <a href="#github" className="text-muted-foreground hover:text-foreground transition-colors">
+                  <a href="https://github.com/Ahmed-Hossam-RT/Portfolio" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-foreground transition-colors">
                     GitHub
-                  </a>
-                </li>
-                <li>
-                  <a href="#twitter" className="text-muted-foreground hover:text-foreground transition-colors">
-                    Twitter
-                  </a>
-                </li>
-                <li>
-                  <a href="#medium" className="text-muted-foreground hover:text-foreground transition-colors">
-                    Medium
                   </a>
                 </li>
               </ul>
@@ -60,11 +51,6 @@ const Footer: React.FC = () => {
                 <li>
                   <a href="#skills" className="text-muted-foreground hover:text-foreground transition-colors">
                     Skills
-                  </a>
-                </li>
-                <li>
-                  <a href="#contact" className="text-muted-foreground hover:text-foreground transition-colors">
-                    Contact
                   </a>
                 </li>
               </ul>
