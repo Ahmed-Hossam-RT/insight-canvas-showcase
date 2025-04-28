@@ -13,15 +13,23 @@ const StatCard: React.FC<{
   return (
     <Link to={to}>
       <motion.div
-        whileHover={{ scale: 1.05 }}
+        whileHover={{ 
+          scale: 1.05,
+          rotate: 1,
+          transition: { type: "spring", stiffness: 400, damping: 10 }
+        }}
         transition={{ type: "spring", stiffness: 300 }}
       >
-        <Card className="border-none shadow-md hover:shadow-xl transition-all duration-300 bg-gradient-to-br from-primary to-accent hover:from-primary/90 hover:to-accent/90 cursor-pointer">
-          <CardContent className="pt-6 flex flex-col items-center justify-center text-center p-6 min-h-[200px]">
-            <div className="mb-4 text-white">
+        <Card className="border-none shadow-lg hover:shadow-2xl transition-all duration-500 bg-gradient-to-br from-primary/80 via-accent to-secondary/90 hover:from-accent hover:via-primary/90 hover:to-accent/90 cursor-pointer overflow-hidden">
+          <CardContent className="pt-6 flex flex-col items-center justify-center text-center p-6 min-h-[200px] relative group">
+            <div className="absolute inset-0 bg-gradient-to-r from-primary/20 to-accent/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+            <motion.div 
+              className="mb-4 text-white relative z-10"
+              whileHover={{ rotate: [0, -10, 10, -10, 0], transition: { duration: 0.5 } }}
+            >
               {icon}
-            </div>
-            <div className="text-xl font-bold text-white">
+            </motion.div>
+            <div className="text-xl font-bold text-white relative z-10">
               {title}
             </div>
           </CardContent>
@@ -33,7 +41,7 @@ const StatCard: React.FC<{
 
 const Stats: React.FC = () => {
   return (
-    <section id="work" className="py-16 px-4 md:px-6 bg-gradient-to-br from-secondary/90 to-secondary">
+    <section id="work" className="py-16 px-4 md:px-6 bg-gradient-to-br from-secondary/80 to-secondary/90">
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           <StatCard 

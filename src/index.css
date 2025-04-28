@@ -105,4 +105,49 @@
   .card-hover {
     @apply hover:shadow-lg hover:shadow-primary/20 transition-all duration-300;
   }
+
+  .animated-gradient-text {
+    @apply bg-gradient-to-r from-primary via-accent to-secondary bg-clip-text text-transparent;
+    background-size: 200% auto;
+    animation: gradient-shift 3s ease-in-out infinite alternate;
+  }
+  
+  .animated-border {
+    @apply relative;
+    overflow: hidden;
+  }
+  
+  .animated-border::after {
+    content: '';
+    @apply absolute bottom-0 left-0 w-0 h-[2px] bg-gradient-to-r from-primary to-accent transition-all duration-300;
+  }
+  
+  .animated-border:hover::after {
+    @apply w-full;
+  }
+  
+  .pulse-effect {
+    animation: pulse-animation 2s infinite;
+  }
+  
+  @keyframes gradient-shift {
+    0% {
+      background-position: 0% center;
+    }
+    100% {
+      background-position: 100% center;
+    }
+  }
+  
+  @keyframes pulse-animation {
+    0% {
+      box-shadow: 0 0 0 0 rgba(var(--primary), 0.7);
+    }
+    70% {
+      box-shadow: 0 0 0 10px rgba(var(--primary), 0);
+    }
+    100% {
+      box-shadow: 0 0 0 0 rgba(var(--primary), 0);
+    }
+  }
 }
