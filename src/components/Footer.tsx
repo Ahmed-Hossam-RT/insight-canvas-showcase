@@ -10,9 +10,9 @@ const Footer: React.FC = () => {
           <div className="mb-6 md:mb-0">
             <div className="flex items-center space-x-2">
               <div className="h-8 w-8 bg-gradient-to-br from-primary to-accent rounded-md flex items-center justify-center">
-                <span className="text-white font-bold text-lg">D</span>
+                <span className="text-white font-bold text-lg">A</span>
               </div>
-              <span className="font-bold text-xl">DataAnalyst</span>
+              <span className="font-bold text-xl">Ahmed Hossam</span>
             </div>
             <p className="text-muted-foreground mt-2 max-w-md">
               Transforming complex data into actionable insights and beautiful visualizations.
@@ -72,7 +72,7 @@ const Footer: React.FC = () => {
         </div>
         
         <div className="border-t border-border mt-12 pt-8 text-center text-sm text-muted-foreground">
-          © {new Date().getFullYear()} Data Analyst Portfolio. All rights reserved.
+          © {new Date().getFullYear()} Ahmed Hossam Portfolio. All rights reserved.
         </div>
       </div>
     </footer>

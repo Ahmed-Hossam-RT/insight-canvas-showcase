@@ -86,6 +86,12 @@
     background-clip: text;
   }
   
+  .text-gradient-primary {
+    @apply bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent;
+    background-size: 200% auto;
+    animation: gradient-shift 3s ease-in-out infinite alternate;
+  }
+  
   .dark-gradient {
     @apply bg-gradient-to-br from-secondary to-secondary/80;
   }
@@ -128,6 +134,20 @@
   
   .pulse-effect {
     animation: pulse-animation 2s infinite;
+  }
+  
+  .hover-scale {
+    @apply transition-transform duration-300 hover:scale-105;
+  }
+  
+  .hover-lift {
+    @apply transition-all duration-300 hover:-translate-y-1 hover:shadow-lg;
+  }
+  
+  .gradient-border {
+    @apply relative border-transparent;
+    background: linear-gradient(to right, transparent, transparent) padding-box,
+              linear-gradient(to right, var(--primary), var(--accent)) border-box;
   }
   
   @keyframes gradient-shift {
