@@ -79,7 +79,7 @@ const CertificateFilters: React.FC<CertificateFiltersProps> = ({ onFilterChange 
               className={
                 activeFilters.includes(domain)
                   ? "bg-gradient-to-r from-primary to-accent hover:from-accent hover:to-primary text-white shadow-md"
-                  : "border-muted-foreground/30 hover:border-primary hover:text-primary"
+                  : "border-muted-foreground/30 hover:border-primary hover:text-primary dark:border-muted-foreground/30 dark:hover:border-primary dark:hover:text-primary"
               }
               onClick={() => toggleFilter(domain)}
             >

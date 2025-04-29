@@ -31,7 +31,7 @@ const StatCard: React.FC<{
           whileTap={{ scale: 0.98 }}
           transition={{ type: "spring", stiffness: 300 }}
         >
-          <Card className="border-none shadow-lg hover:shadow-2xl transition-all duration-500 bg-gradient-to-br from-primary/80 via-accent to-secondary/90 hover:from-accent hover:via-primary/90 hover:to-accent/90 cursor-pointer overflow-hidden">
+          <Card className="border-none shadow-lg hover:shadow-2xl transition-all duration-500 bg-gradient-to-br from-primary/80 via-accent to-secondary/90 hover:from-accent hover:via-primary/90 hover:to-accent/90 cursor-pointer overflow-hidden dark:from-primary/80 dark:via-accent dark:to-secondary/90 dark:hover:from-accent dark:hover:via-primary/90 dark:hover:to-accent/90">
             <CardContent className="pt-6 flex flex-col items-center justify-center text-center p-6 min-h-[200px] relative group">
               <div className="absolute inset-0 bg-gradient-to-r from-primary/20 to-accent/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
               <motion.div 
@@ -66,8 +66,12 @@ const StatCard: React.FC<{
 
 const Stats: React.FC = () => {
   return (
-    <section id="work" className="py-16 px-4 md:px-6 bg-gradient-to-br from-secondary/80 to-secondary/90">
+    <section id="work" className="py-16 px-4 md:px-6 bg-gradient-to-br from-secondary/10 to-secondary/20 dark:from-secondary/80 dark:to-secondary/90">
       <div className="max-w-7xl mx-auto">
+        <div className="text-center mb-12">
+          <h2 className="text-3xl font-bold mb-2 text-gradient-primary">Explore My Work</h2>
+          <p className="text-muted-foreground max-w-2xl mx-auto">Dive deeper into my projects, certifications, and technical skills</p>
+        </div>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           <StatCard 
             icon={<Briefcase className="h-10 w-10" />}

@@ -7,4 +7,5 @@ export interface Certificate {
   domain: string;
   description: string;
   image?: string;
+  credentialUrl?: string;
 }

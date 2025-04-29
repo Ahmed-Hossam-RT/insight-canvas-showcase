@@ -1,9 +1,9 @@
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Button } from "@/components/ui/button";
 import { ThemeToggle } from "./ThemeToggle";
-import { Link } from 'react-router-dom';
-import { Menu, X } from 'lucide-react';
+import { Link, useLocation } from 'react-router-dom';
+import { Menu, X, Linkedin } from 'lucide-react';
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -22,6 +22,29 @@ import {
 
 const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const location = useLocation();
+  const [activeSection, setActiveSection] = useState('');
+
+  // Update active section based on URL hash or pathname
+  useEffect(() => {
+    const hash = location.hash;
+    if (hash) {
+      setActiveSection(hash.substring(1)); // Remove # from the hash
+    } else if (location.pathname !== '/') {
+      setActiveSection(location.pathname.substring(1)); // Remove / from the pathname
+    } else {
+      setActiveSection('about'); // Default to about on homepage with no hash
+    }
+  }, [location]);
+
+  const isActive = (section: string) => {
+    // Handle both hash-based and path-based sections
+    if (section.startsWith('#')) {
+      return activeSection === section.substring(1);
+    } else {
+      return activeSection === section.substring(1) || location.pathname === section;
+    }
+  };
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -42,46 +65,57 @@ const Header: React.FC = () => {
         <NavigationMenuList>
           <NavigationMenuItem>
             <Link to="/#about">
-              <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+              <NavigationMenuLink 
+                className={`${navigationMenuTriggerStyle()} ${isActive('#about') ? 'bg-primary/10 text-primary' : ''}`}
+              >
                 About
               </NavigationMenuLink>
             </Link>
           </NavigationMenuItem>
           <NavigationMenuItem>
             <Link to="/#projects">
-              <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+              <NavigationMenuLink 
+                className={`${navigationMenuTriggerStyle()} ${isActive('#projects') ? 'bg-primary/10 text-primary' : ''}`}
+              >
                 Projects
               </NavigationMenuLink>
             </Link>
           </NavigationMenuItem>
           <NavigationMenuItem>
             <Link to="/#work">
-              <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+              <NavigationMenuLink 
+                className={`${navigationMenuTriggerStyle()} ${isActive('#work') ? 'bg-primary/10 text-primary' : ''}`}
+              >
                 Work
               </NavigationMenuLink>
             </Link>
           </NavigationMenuItem>
           <NavigationMenuItem>
-            <Link to="/#skills">
-              <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+            <Link to="/skills">
+              <NavigationMenuLink 
+                className={`${navigationMenuTriggerStyle()} ${isActive('/skills') ? 'bg-primary/10 text-primary' : ''}`}
+              >
                 Skills
               </NavigationMenuLink>
             </Link>
           </NavigationMenuItem>
           <NavigationMenuItem>
             <Link to="/#contact">
-              <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+              <NavigationMenuLink 
+                className={`${navigationMenuTriggerStyle()} ${isActive('#contact') ? 'bg-primary/10 text-primary' : ''}`}
+              >
                 Contact
               </NavigationMenuLink>
             </Link>
           </NavigationMenuItem>
           <NavigationMenuItem>
             <a 
-              href="https://www.linkedin.com/in/ahmed-hossam-285b86241" 
+              href="https://www.linkedin.com/in/ahmed-hossam-913b19121" 
               target="_blank" 
               rel="noopener noreferrer"
-              className={navigationMenuTriggerStyle() + " hover:bg-gradient-to-r hover:from-primary hover:to-accent hover:text-white transition-colors duration-300"}
+              className={navigationMenuTriggerStyle() + " bg-gradient-to-r from-primary to-accent text-white hover:from-accent hover:to-primary transition-colors duration-300 flex items-center gap-2"}
             >
+              <Linkedin className="h-4 w-4" />
               LinkedIn
             </a>
           </NavigationMenuItem>
@@ -98,17 +132,18 @@ const Header: React.FC = () => {
           </PopoverTrigger>
           <PopoverContent className="w-screen p-4 mr-6 mt-2 border-t-0 rounded-t-none">
             <nav className="flex flex-col space-y-4">
-              <Link to="/#about" className="text-foreground hover:text-primary transition-colors py-2 border-b border-border">About</Link>
-              <Link to="/#projects" className="text-foreground hover:text-primary transition-colors py-2 border-b border-border">Projects</Link>
-              <Link to="/#work" className="text-foreground hover:text-primary transition-colors py-2 border-b border-border">Work</Link>
-              <Link to="/#skills" className="text-foreground hover:text-primary transition-colors py-2 border-b border-border">Skills</Link>
-              <Link to="/#contact" className="text-foreground hover:text-primary transition-colors py-2 border-b border-border">Contact</Link>
+              <Link to="/#about" className={`text-foreground hover:text-primary transition-colors py-2 border-b border-border ${isActive('#about') ? 'text-primary font-medium' : ''}`}>About</Link>
+              <Link to="/#projects" className={`text-foreground hover:text-primary transition-colors py-2 border-b border-border ${isActive('#projects') ? 'text-primary font-medium' : ''}`}>Projects</Link>
+              <Link to="/#work" className={`text-foreground hover:text-primary transition-colors py-2 border-b border-border ${isActive('#work') ? 'text-primary font-medium' : ''}`}>Work</Link>
+              <Link to="/skills" className={`text-foreground hover:text-primary transition-colors py-2 border-b border-border ${isActive('/skills') ? 'text-primary font-medium' : ''}`}>Skills</Link>
+              <Link to="/#contact" className={`text-foreground hover:text-primary transition-colors py-2 border-b border-border ${isActive('#contact') ? 'text-primary font-medium' : ''}`}>Contact</Link>
               <a 
-                href="https://www.linkedin.com/in/ahmed-hossam-285b86241" 
+                href="https://www.linkedin.com/in/ahmed-hossam-913b19121" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="text-foreground hover:text-primary transition-colors py-2"
+                className="text-foreground hover:text-primary transition-colors py-2 flex items-center gap-2"
               >
+                <Linkedin className="h-4 w-4" />
                 LinkedIn
               </a>
             </nav>

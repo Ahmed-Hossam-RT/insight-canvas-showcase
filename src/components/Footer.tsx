@@ -1,6 +1,7 @@
 
 import React from 'react';
-import { Linkedin, Github } from 'lucide-react';
+import { Linkedin, Github, Mail } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const Footer: React.FC = () => {
   return (
@@ -15,7 +16,7 @@ const Footer: React.FC = () => {
               <span className="font-bold text-xl">Ahmed Hossam</span>
             </div>
             <p className="text-muted-foreground mt-2 max-w-md">
-              Transforming complex data into actionable insights and beautiful visualizations.
+              Ahmed Hossam - Transforming complex data into actionable insights and beautiful visualizations.
             </p>
           </div>
           
@@ -25,7 +26,7 @@ const Footer: React.FC = () => {
               <ul className="space-y-2">
                 <li>
                   <a 
-                    href="https://www.linkedin.com/in/ahmed-hossam-285b86241" 
+                    href="https://www.linkedin.com/in/ahmed-hossam-913b19121" 
                     target="_blank" 
                     rel="noopener noreferrer" 
                     className="flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors group"
@@ -45,6 +46,15 @@ const Footer: React.FC = () => {
                     <span className="group-hover:translate-x-1 transition-transform duration-300">GitHub</span>
                   </a>
                 </li>
+                <li>
+                  <a 
+                    href="mailto:contact@ahmedhossam.com" 
+                    className="flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors group"
+                  >
+                    <Mail className="h-5 w-5 group-hover:text-primary transition-colors duration-300" />
+                    <span className="group-hover:translate-x-1 transition-transform duration-300">Email</span>
+                  </a>
+                </li>
               </ul>
             </div>
             
@@ -52,19 +62,24 @@ const Footer: React.FC = () => {
               <h3 className="font-medium mb-4">Navigation</h3>
               <ul className="space-y-2">
                 <li>
-                  <a href="#about" className="text-muted-foreground hover:text-primary transition-colors hover:translate-x-1 inline-block hover:translate-x-1 transition-transform duration-300">
+                  <Link to="/#about" className="text-muted-foreground hover:text-primary transition-colors hover:translate-x-1 inline-block transition-transform duration-300">
                     About
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="#projects" className="text-muted-foreground hover:text-primary transition-colors hover:translate-x-1 inline-block hover:translate-x-1 transition-transform duration-300">
+                  <Link to="/#projects" className="text-muted-foreground hover:text-primary transition-colors hover:translate-x-1 inline-block transition-transform duration-300">
                     Projects
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="#skills" className="text-muted-foreground hover:text-primary transition-colors hover:translate-x-1 inline-block hover:translate-x-1 transition-transform duration-300">
+                  <Link to="/skills" className="text-muted-foreground hover:text-primary transition-colors hover:translate-x-1 inline-block transition-transform duration-300">
                     Skills
-                  </a>
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/certificates" className="text-muted-foreground hover:text-primary transition-colors hover:translate-x-1 inline-block transition-transform duration-300">
+                    Certificates
+                  </Link>
                 </li>
               </ul>
             </div>

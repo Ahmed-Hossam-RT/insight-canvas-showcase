@@ -1,6 +1,6 @@
 
 import React, { useState } from 'react';
-import { ChevronLeft } from 'lucide-react';
+import { ChevronLeft, Upload } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
@@ -8,6 +8,7 @@ import { Button } from '@/components/ui/button';
 import CertificateFilters from '@/components/CertificateFilters';
 import CertificateGrid from '@/components/CertificateGrid';
 import { Certificate } from '@/types/certificate';
+import { motion } from 'framer-motion';
 
 const CertificatesPage = () => {
   const navigate = useNavigate();
@@ -29,7 +30,8 @@ const CertificatesPage = () => {
       issueDate: 'June 2023',
       domain: 'Power BI',
       description: 'Certification validating skills in creating and maintaining Power BI dashboards, performing data analysis, and transforming data into actionable insights.',
-      image: '/certificates/power-bi-cert.jpg'
+      image: '/certificates/power-bi-cert.jpg',
+      credentialUrl: 'https://www.credly.com/badges/microsoft-certified-power-bi-data-analyst'
     },
     {
       id: '2',
@@ -38,7 +40,8 @@ const CertificatesPage = () => {
       issueDate: 'March 2023',
       domain: 'Data Engineer',
       description: 'Specialization in designing, building, and maintaining data processing systems with a focus on reliability, efficiency, and security.',
-      image: '/certificates/gcp-data-engineering.jpg'
+      image: '/certificates/gcp-data-engineering.jpg',
+      credentialUrl: 'https://www.coursera.org/account/accomplishments/specialization/data-engineering-gcp'
     },
     {
       id: '3',
@@ -47,7 +50,8 @@ const CertificatesPage = () => {
       issueDate: 'January 2023',
       domain: 'SQL',
       description: 'Advanced course covering complex SQL queries, optimization techniques, and data manipulation for analytical purposes.',
-      image: '/certificates/sql-advanced.jpg'
+      image: '/certificates/sql-advanced.jpg',
+      credentialUrl: 'https://www.datacamp.com/certificate/SQL-advanced'
     },
     {
       id: '4',
@@ -56,7 +60,8 @@ const CertificatesPage = () => {
       issueDate: 'November 2022',
       domain: 'Cloud',
       description: 'Validates technical expertise in designing and maintaining AWS data analytics solutions.',
-      image: '/certificates/aws-analytics.jpg'
+      image: '/certificates/aws-analytics.jpg',
+      credentialUrl: 'https://www.credly.com/badges/aws-certified-data-analytics-specialty'
     },
     {
       id: '5',
@@ -65,7 +70,8 @@ const CertificatesPage = () => {
       issueDate: 'October 2022',
       domain: 'Data Analyst',
       description: 'Comprehensive track covering Python libraries for data analysis including Pandas, NumPy, and Matplotlib.',
-      image: '/certificates/python-analyst.jpg'
+      image: '/certificates/python-analyst.jpg',
+      credentialUrl: 'https://www.datacamp.com/certificate/data-analyst-with-python'
     },
     {
       id: '6',
@@ -74,7 +80,8 @@ const CertificatesPage = () => {
       issueDate: 'August 2022',
       domain: 'Machine Learning',
       description: 'Introduction to machine learning algorithms, techniques, and practical applications in data science.',
-      image: '/certificates/ml-fundamentals.jpg'
+      image: '/certificates/ml-fundamentals.jpg',
+      credentialUrl: 'https://www.coursera.org/account/accomplishments/verify/ML-fundamentals'
     }
   ];
 
@@ -86,11 +93,11 @@ const CertificatesPage = () => {
   return (
     <div className="min-h-screen flex flex-col">
       <Header />
-      <main className="flex-grow py-20 px-4 md:px-6 bg-gradient-to-b from-analyst-darkgrey to-analyst-black">
+      <main className="flex-grow py-20 px-4 md:px-6 light-section dark:bg-gradient-to-b dark:from-analyst-darkgrey dark:to-analyst-black">
         <div className="max-w-7xl mx-auto">
           <Button 
             variant="outline" 
-            className="mb-8 flex items-center gap-2"
+            className="mb-8 flex items-center gap-2 hover:bg-primary/10 hover:text-primary transition-all duration-300"
             onClick={handleGoBack}
           >
             <ChevronLeft className="h-4 w-4" />
@@ -98,14 +105,42 @@ const CertificatesPage = () => {
           </Button>
 
           <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold mb-4 text-white">Professional Certificates</h2>
-            <p className="text-white/80 max-w-2xl mx-auto">
+            <motion.h2 
+              initial={{ opacity: 0, y: -20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5 }}
+              className="text-3xl font-bold mb-4 text-gradient-primary dark:text-white"
+            >
+              Professional Certificates
+            </motion.h2>
+            <motion.p 
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+              className="text-muted-foreground max-w-2xl mx-auto dark:text-white/80"
+            >
               A collection of my professional certifications demonstrating expertise in various domains of data analysis, engineering, and cloud technologies.
-            </p>
+            </motion.p>
           </div>
           
           <CertificateFilters onFilterChange={handleFilterChange} />
           <CertificateGrid certificates={filteredCertificates} />
+          
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.5 }}
+            className="mt-16 p-6 bg-muted/50 rounded-lg border border-border/50 text-center dark:bg-white/5 dark:border-white/10"
+          >
+            <h3 className="text-xl font-medium mb-3 text-foreground dark:text-white">Add Your Own Certificates</h3>
+            <p className="text-muted-foreground mb-6 max-w-md mx-auto dark:text-white/70">
+              To add your own certificates, update the certificates array in the CertificatesPage component with your certification details.
+            </p>
+            <Button className="bg-gradient-to-r from-primary to-accent hover:from-accent hover:to-primary text-white flex items-center gap-2">
+              <Upload className="h-4 w-4" />
+              <span>Add Certificate</span>
+            </Button>
+          </motion.div>
         </div>
       </main>
       <Footer />

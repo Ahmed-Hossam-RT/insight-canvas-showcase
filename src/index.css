@@ -76,6 +76,37 @@
     @apply bg-background text-foreground;
     font-feature-settings: "rlig" 1, "calt" 1;
   }
+  
+  /* Enhanced scrollbar for light mode */
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-muted;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-gradient-to-b from-primary/70 to-accent/70 rounded-full;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-gradient-to-b from-primary to-accent;
+  }
+
+  /* Light mode specific enhancements */
+  :root {
+    @apply selection:bg-primary/20 selection:text-primary;
+  }
+
+  .dark {
+    @apply selection:bg-primary/30 selection:text-white;
+  }
+
+  /* Enhanced focus states */
+  *:focus-visible {
+    @apply outline-none ring-2 ring-primary/50 ring-offset-2;
+  }
 }
 
 @layer utilities {
@@ -150,6 +181,23 @@
               linear-gradient(to right, var(--primary), var(--accent)) border-box;
   }
   
+  /* Light mode specific utility classes */
+  .light-card {
+    @apply bg-white shadow-sm border border-border/50 hover:shadow-md hover:border-primary/20 transition-all duration-300;
+  }
+  
+  .light-section {
+    @apply bg-gradient-to-b from-background to-muted/50;
+  }
+  
+  .light-button {
+    @apply bg-gradient-to-r from-primary/90 to-accent/90 text-white hover:from-primary hover:to-accent transition-all duration-300 shadow-sm hover:shadow-md;
+  }
+  
+  .active-nav-item {
+    @apply relative after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-gradient-to-r after:from-primary after:to-accent;
+  }
+  
   @keyframes gradient-shift {
     0% {
       background-position: 0% center;
@@ -169,5 +217,10 @@
     100% {
       box-shadow: 0 0 0 0 rgba(var(--primary), 0);
     }
+  }
+  
+  /* Enhanced light mode button */
+  .btn-light {
+    @apply bg-white border border-border/50 shadow-sm hover:shadow-md hover:bg-muted/30 transition-all duration-300;
   }
 }
