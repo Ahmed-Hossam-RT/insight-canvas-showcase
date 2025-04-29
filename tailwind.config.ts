@@ -60,6 +60,8 @@ export default {
           navy: '#0A2463',       // Deep Navy
           grey: '#647C90',       // Professional Grey
           lightgrey: '#E5E5E5',  // Neutral Light Grey
+          darkgrey: '#1E293B',   // Dark Grey for backgrounds
+          black: '#0F172A',      // Near Black for backgrounds
         },
       },
       borderRadius: {

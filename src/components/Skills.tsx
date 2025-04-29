@@ -67,7 +67,7 @@ const Skills: React.FC = () => {
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {domainExpertise.map((domain, index) => (
-              <Card key={index} className="hover-lift border border-border bg-card dark:bg-gradient-to-br dark:from-analyst-darkgrey dark:to-analyst-black dark:border-analyst-blue/20">
+              <Card key={index} className="hover-lift border border-border bg-white shadow-sm dark:bg-gradient-to-br dark:from-analyst-darkgrey dark:to-analyst-black dark:border-analyst-blue/20">
                 <CardContent className="p-6">
                   <div className="flex items-start gap-4">
                     <div className="p-3 rounded-full bg-primary/10 dark:bg-primary/20">
@@ -88,7 +88,7 @@ const Skills: React.FC = () => {
                                 {area}
                               </Badge>
                             </HoverCardTrigger>
-                            <HoverCardContent className="w-64 bg-card dark:bg-analyst-darkgrey dark:text-white">
+                            <HoverCardContent className="w-64 bg-white shadow-md border-border dark:bg-analyst-darkgrey dark:text-white">
                               <p className="text-sm">Specialized expertise in {area} techniques and applications.</p>
                             </HoverCardContent>
                           </HoverCard>

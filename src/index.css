@@ -1,4 +1,3 @@
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -75,6 +74,14 @@
   body {
     @apply bg-background text-foreground;
     font-feature-settings: "rlig" 1, "calt" 1;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply text-foreground dark:text-white;
+  }
+  
+  p {
+    @apply text-foreground/80 dark:text-white/80;
   }
   
   /* Enhanced scrollbar for light mode */
@@ -188,6 +195,14 @@
   
   .light-section {
     @apply bg-gradient-to-b from-background to-muted/50;
+  }
+  
+  .light-text {
+    @apply text-foreground dark:text-white;
+  }
+  
+  .light-text-muted {
+    @apply text-foreground/70 dark:text-white/70;
   }
   
   .light-button {
