@@ -74,9 +74,7 @@ const Header: React.FC = () => {
           </NavigationMenuItem>
           <NavigationMenuItem>
             <Link to="/#contact">
-              <NavigationMenuLink className={`${navigationMenuTriggerStyle()} ${isActive('#contact') ? 'bg-primary/10 text-primary' : ''}`}>
-                Contact
-              </NavigationMenuLink>
+              
             </Link>
           </NavigationMenuItem>
           <NavigationMenuItem>
