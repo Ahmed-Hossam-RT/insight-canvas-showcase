@@ -62,6 +62,9 @@ export default {
           lightgrey: '#E5E5E5',  // Neutral Light Grey
           darkgrey: '#1E293B',   // Dark Grey for backgrounds
           black: '#0F172A',      // Near Black for backgrounds
+          charcoal: '#121212',   // Dark charcoal for backgrounds
+          sapphire: '#102542',   // Deep sapphire blue
+          cyan: '#00B4D8',       // Cyan accent color
         },
         gray: {
           50: '#F8FAFC', 

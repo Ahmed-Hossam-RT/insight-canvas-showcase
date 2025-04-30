@@ -31,12 +31,12 @@ const projectsData = [
 
 const Projects: React.FC = () => {
   return (
-    <div className="bg-background dark:bg-analyst-darkgrey">
+    <div className="bg-background light-section dark:bg-analyst-darkgrey">
       <div className="max-w-7xl mx-auto">
         <ContentSection title="Featured Projects" items={projectsData} />
         <div className="flex justify-center pb-12">
           <Button 
-            className="bg-analyst-orange hover:bg-analyst-burntorange text-white dark:bg-analyst-orange dark:hover:bg-analyst-burntorange"
+            className="bg-gradient-to-r from-analyst-blue to-analyst-navy hover:opacity-90 transition-opacity text-white shadow-md"
             asChild
           >
             <Link to="/projects">

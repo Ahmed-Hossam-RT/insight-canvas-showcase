@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Button } from "@/components/ui/button";
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
@@ -38,7 +39,7 @@ const Hero: React.FC = () => {
         <div className="flex flex-wrap items-center justify-center gap-4">
           <Button 
             size="lg" 
-            className="bg-gradient-to-r from-analyst-orange to-analyst-burntorange hover:opacity-90 transition-opacity text-white"
+            className="bg-gradient-to-r from-analyst-blue to-analyst-navy hover:opacity-90 transition-opacity text-white shadow-md"
             onClick={scrollToWork}
           >
             <ChartPie className="mr-2" size={18} />
@@ -46,16 +47,14 @@ const Hero: React.FC = () => {
           </Button>
           <Button 
             size="lg" 
-            variant="outline" 
-            className="border-white text-white hover:bg-white/10 dark:border-analyst-cyan dark:text-analyst-cyan dark:hover:bg-analyst-cyan/10"
+            className="bg-gradient-to-r from-analyst-blue to-analyst-navy hover:opacity-90 transition-opacity text-white shadow-md"
           >
             <ChartBar className="mr-2" size={18} />
             Download CV
           </Button>
           <Button
             size="lg"
-            variant="outline"
-            className="border-white text-white hover:bg-white/10"
+            className="bg-gradient-to-r from-analyst-blue to-analyst-navy hover:opacity-90 transition-opacity text-white shadow-md"
             asChild
           >
             <a href="https://linkedin.com/in/your-profile" target="_blank" rel="noopener noreferrer">

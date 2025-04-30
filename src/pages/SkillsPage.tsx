@@ -28,7 +28,7 @@ const SkillsPage = () => {
         <div className="max-w-7xl mx-auto">
           <Button 
             variant="outline" 
-            className="mb-8 flex items-center gap-2"
+            className="mb-8 flex items-center gap-2 text-primary hover:bg-primary/10 dark:text-white dark:hover:bg-white/10"
             onClick={handleGoBack}
           >
             <ChevronLeft className="h-4 w-4" />
@@ -36,7 +36,7 @@ const SkillsPage = () => {
           </Button>
 
           <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold mb-4 text-gray-800 dark:text-white">Domain Expertise</h2>
+            <h2 className="text-3xl font-bold mb-4 text-gradient-primary dark:text-white">Domain Expertise</h2>
             <p className="text-gray-700 dark:text-white/80 max-w-2xl mx-auto">
               I specialize in transforming complex data into actionable insights, leveraging advanced analytical techniques and cutting-edge technologies to drive strategic decision-making across various domains.
             </p>
@@ -44,7 +44,7 @@ const SkillsPage = () => {
 
           <div className="space-y-6">
             {skillsData.map((skill, index) => (
-              <Card key={index} className="bg-white shadow-md dark:bg-gradient-to-br dark:from-analyst-darkgrey dark:to-analyst-black border border-gray-200 dark:border-analyst-blue/20">
+              <Card key={index} className="bg-white shadow-md border border-gray-200 dark:bg-gradient-to-br dark:from-analyst-darkgrey dark:to-analyst-black dark:border-analyst-blue/20">
                 <CardContent className="pt-6">
                   <div className="space-y-3">
                     <h3 className="font-medium text-gray-800 dark:text-white text-xl">{skill.name}</h3>
