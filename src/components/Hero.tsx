@@ -16,7 +16,7 @@ const Hero: React.FC = () => {
         <div className="flex justify-center mb-8">
           <Avatar className="h-32 w-32 border-2 border-white/20 shadow-lg hover:scale-105 transition-transform duration-300">
             <AvatarImage 
-              src="/images/profile/profile-photo.jpg" 
+              src="/images/profile/profile.jpg" 
               alt="Ahmed Hossam Profile Photo" 
               className="object-cover rounded-full"
             />
