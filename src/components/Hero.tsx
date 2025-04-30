@@ -14,9 +14,9 @@ const Hero: React.FC = () => {
     <section id="about" className="py-20 px-4 md:px-6 flex flex-col items-center text-center bg-gradient-to-br from-analyst-black to-analyst-darkgrey dark:from-analyst-charcoal dark:to-analyst-sapphire">
       <div className="animate-fade-in max-w-4xl mx-auto">
         <div className="flex justify-center mb-8">
-          <Avatar className="h-32 w-32">
+          <Avatar className="h-32 w-32 border-2 border-white/20 shadow-lg hover:scale-105 transition-transform duration-300">
             <AvatarImage 
-              src="/placeholder.svg" 
+              src="/images/profile/profile-photo.jpg" 
               alt="Ahmed Hossam Profile Photo" 
               className="object-cover rounded-full"
             />
