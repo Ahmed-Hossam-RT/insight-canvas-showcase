@@ -57,7 +57,7 @@ const Hero: React.FC = () => {
             className="bg-gradient-to-r from-analyst-blue to-analyst-navy hover:opacity-90 transition-opacity text-white shadow-md"
             asChild
           >
-            <a href="https://www.linkedin.com/in/ahmed-hossam-285b86241/" target="_blank" rel="noopener noreferrer">
+            <a href="https:www.linkedin.com/in/ahmed-hossam-285b86241" target="_blank" rel="noopener noreferrer">
               <Linkedin className="mr-2" size={18} />
               LinkedIn
             </a>
