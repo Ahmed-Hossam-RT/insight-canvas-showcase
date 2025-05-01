@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Linkedin, Github, Mail } from 'lucide-react';
 import { Link } from 'react-router-dom';
@@ -20,7 +21,7 @@ const Footer: React.FC = () => {
               <h3 className="font-medium mb-4">Connect</h3>
               <ul className="space-y-2">
                 <li>
-                  <a href="https://www.linkedin.com/in/ahmed-hossam-913b19121" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors group">
+                  <a href="https://www.linkedin.com/in/ahmed-hosam05" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors group">
                     <Linkedin className="h-5 w-5 group-hover:text-primary transition-colors duration-300" />
                     <span className="group-hover:translate-x-1 transition-transform duration-300">LinkedIn</span>
                   </a>
