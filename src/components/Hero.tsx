@@ -50,7 +50,7 @@ const Hero: React.FC = () => {
             className="bg-gradient-to-r from-analyst-blue to-analyst-navy hover:opacity-90 transition-opacity text-white shadow-md"
             asChild
           >
-            <a href="/files/ahmed-hossam-cv.pdf" download>
+            <a href="/files/ahmed-hossam-cv.pdf" download="Ahmed_Hossam_CV.pdf">
               <Download className="mr-2" size={18} />
               Download CV
             </a>
