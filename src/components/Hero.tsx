@@ -2,7 +2,7 @@
 import React from 'react';
 import { Button } from "@/components/ui/button";
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
-import { ChartBar, ChartPie, Linkedin } from 'lucide-react';
+import { ChartBar, ChartPie, Linkedin, Download } from 'lucide-react';
 
 const Hero: React.FC = () => {
   const scrollToWork = () => {
@@ -16,7 +16,7 @@ const Hero: React.FC = () => {
         <div className="flex justify-center mb-8">
           <Avatar className="h-32 w-32 border-2 border-white/20 shadow-lg hover:scale-105 transition-transform duration-300">
             <AvatarImage 
-              src="public/images/Profile/profile.jpg" 
+              src="/images/Profile/profile.jpg" 
               alt="Ahmed Hossam Profile Photo" 
               className="object-cover rounded-full"
             />
@@ -48,9 +48,12 @@ const Hero: React.FC = () => {
           <Button 
             size="lg" 
             className="bg-gradient-to-r from-analyst-blue to-analyst-navy hover:opacity-90 transition-opacity text-white shadow-md"
+            asChild
           >
-            <ChartBar className="mr-2" size={18} />
-            Download CV
+            <a href="/files/ahmed-hossam-cv.pdf" download>
+              <Download className="mr-2" size={18} />
+              Download CV
+            </a>
           </Button>
           <Button
             size="lg"
