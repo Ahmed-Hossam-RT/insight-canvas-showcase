@@ -50,7 +50,7 @@ const ProjectsPage: React.FC = () => {
               transition={{ duration: 0.5 }}
               className="text-3xl font-bold mb-4 text-gradient-primary dark:text-white"
             >
-              My Data Projects
+              My Power BI Projects
             </motion.h2>
             
             <motion.p 
@@ -59,7 +59,7 @@ const ProjectsPage: React.FC = () => {
               transition={{ duration: 0.5, delay: 0.2 }}
               className="text-xl mb-8 text-muted-foreground max-w-2xl mx-auto dark:text-white/80"
             >
-              Interactive dashboards and insights from my analytics work
+              Interactive dashboards and business intelligence reports created with Power BI
             </motion.p>
           </div>
           

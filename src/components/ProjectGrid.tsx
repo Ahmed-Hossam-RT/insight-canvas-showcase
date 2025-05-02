@@ -9,96 +9,98 @@ const projectsData: ProjectType[] = [
   {
     id: "1",
     title: "Marketing Analytics Dashboard",
-    description: "Interactive dashboard showing key marketing metrics and ROI analysis",
+    description: "Interactive Power BI dashboard showing key marketing metrics and ROI analysis",
     type: "data",
     thumbnail: "/placeholder.svg",
     date: "2024-04-20",
-    category: ["Marketing", "Analytics"],
-    content: "This dashboard provides a comprehensive overview of our marketing campaigns, including ROI metrics, conversion rates, and customer acquisition costs.",
+    category: ["Power BI", "Marketing", "Analytics"],
+    content: "This Power BI dashboard provides a comprehensive overview of our marketing campaigns, including ROI metrics, conversion rates, and customer acquisition costs.",
     insights: [
       "Social media campaigns outperformed email by 37% in Q2",
       "Customer acquisition cost decreased by 24% after website optimization",
       "Mobile traffic converts 18% better on the new landing page design"
     ],
-    dashboardUrl: "https://example.com/marketing-dashboard"
+    dashboardUrl: "https://app.powerbi.com/view?r=example-marketing"
   },
   {
     id: "2",
-    title: "Customer Segmentation Report",
-    description: "Detailed analysis of customer segments based on behavior patterns",
-    type: "document",
+    title: "Customer Segmentation Analysis",
+    description: "Detailed Power BI report with customer segments based on behavior patterns",
+    type: "data",
     thumbnail: "/placeholder.svg",
     date: "2024-04-15",
-    category: ["Research", "Customer Analysis"],
-    content: "This report segments our customer base into distinct groups based on purchasing behavior, demographics, and engagement metrics.",
+    category: ["Power BI", "Customer Analysis", "Research"],
+    content: "This Power BI report segments our customer base into distinct groups based on purchasing behavior, demographics, and engagement metrics.",
     insights: [
       "High-value customers make up only 6% of the base but generate 43% of revenue",
       "Loyalty program members spend 2.3x more than non-members",
       "First-time purchase rate increased after UX improvements"
-    ]
+    ],
+    dashboardUrl: "https://app.powerbi.com/view?r=example-customer"
   },
   {
     id: "3",
     title: "Sales Performance Visualization",
-    description: "Visual representation of quarterly sales performance across regions",
-    type: "image",
+    description: "Regional sales performance Power BI dashboard with interactive filters",
+    type: "data",
     thumbnail: "/placeholder.svg",
     date: "2024-04-10",
-    category: ["Sales", "Visualization"],
-    content: "This interactive map shows regional sales performance with year-over-year comparisons and trend analysis.",
+    category: ["Power BI", "Sales", "Visualization"],
+    content: "This interactive Power BI dashboard shows regional sales performance with year-over-year comparisons and trend analysis.",
     insights: [
       "Western region showed 27% YoY growth, outperforming all other regions",
       "Product line A experienced consistent growth across all markets",
       "Seasonal patterns indicate optimal timing for new product launches"
     ],
-    dashboardUrl: "https://example.com/sales-dashboard"
+    dashboardUrl: "https://app.powerbi.com/view?r=example-sales"
   },
   {
     id: "4",
-    title: "Financial Forecast Model",
-    description: "Predictive models for quarterly financial planning",
+    title: "Financial Forecast Dashboard",
+    description: "Power BI models for quarterly financial planning and forecasting",
     type: "data",
     thumbnail: "/placeholder.svg",
     date: "2024-04-05",
-    category: ["Finance", "Analytics"],
-    content: "This forecasting model helps predict revenue streams and expense patterns for improved financial planning.",
+    category: ["Power BI", "Finance", "Analytics"],
+    content: "This Power BI forecasting model helps predict revenue streams and expense patterns for improved financial planning.",
     insights: [
       "The model predicted Q1 revenue within 3.5% accuracy",
       "Seasonal factors account for 23% of variance in our sales cycles",
       "Cost optimization opportunities identified in operations and marketing"
     ],
-    dashboardUrl: "https://example.com/finance-dashboard"
+    dashboardUrl: "https://app.powerbi.com/view?r=example-finance"
   },
   {
     id: "5",
-    title: "Website Analytics Report",
-    description: "Comprehensive analysis of website traffic and conversion metrics",
-    type: "document",
+    title: "Website Analytics Dashboard",
+    description: "Comprehensive Power BI analysis of website traffic and conversion metrics",
+    type: "data",
     thumbnail: "/placeholder.svg",
     date: "2024-03-28",
-    category: ["Digital", "Analytics"],
-    content: "This report analyzes user behavior across our digital properties, identifying optimization opportunities and tracking goal completion.",
+    category: ["Power BI", "Digital", "Analytics"],
+    content: "This Power BI report analyzes user behavior across our digital properties, identifying optimization opportunities and tracking goal completion.",
     insights: [
       "Mobile conversion rate improved 42% after checkout optimization",
       "Average session duration increased by 1:45 minutes",
       "Top entry pages driving 68% of new visitor traffic"
-    ]
+    ],
+    dashboardUrl: "https://app.powerbi.com/view?r=example-website"
   },
   {
     id: "6",
     title: "Supply Chain Optimization",
-    description: "Analysis and visualization of supply chain efficiency metrics",
-    type: "image",
+    description: "Power BI dashboard of supply chain efficiency metrics and KPIs",
+    type: "data",
     thumbnail: "/placeholder.svg",
     date: "2024-03-20",
-    category: ["Operations", "Logistics"],
-    content: "This visualization tracks key metrics in our supply chain, from procurement to delivery, highlighting bottlenecks and optimization opportunities.",
+    category: ["Power BI", "Operations", "Logistics"],
+    content: "This Power BI visualization tracks key metrics in our supply chain, from procurement to delivery, highlighting bottlenecks and optimization opportunities.",
     insights: [
       "Reduced lead times by 34% after process improvements",
       "Inventory turns increased from 6 to 8.5 annually",
       "Logistics costs as percentage of revenue decreased by 2.7%"
     ],
-    dashboardUrl: "https://example.com/supply-chain-dashboard"
+    dashboardUrl: "https://app.powerbi.com/view?r=example-supply"
   }
 ];
 
