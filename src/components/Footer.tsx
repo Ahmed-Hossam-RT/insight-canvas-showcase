@@ -2,14 +2,19 @@
 import React from 'react';
 import { Linkedin, Github, Mail } from 'lucide-react';
 import { Link } from 'react-router-dom';
+
 const Footer: React.FC = () => {
   return <footer className="py-12 px-4 md:px-6 bg-gradient-to-b from-analyst-lightblue/10 to-analyst-gray/20 dark:from-slate-800 dark:to-slate-900">
       <div className="max-w-7xl mx-auto">
         <div className="flex flex-col md:flex-row justify-between items-center">
           <div className="mb-6 md:mb-0">
             <div className="flex items-center space-x-2">
-              <div className="h-8 w-8 bg-gradient-to-br from-primary to-accent rounded-md flex items-center justify-center">
-                <span className="text-white font-bold text-lg">A</span>
+              <div className="h-8 w-8 bg-gradient-to-br from-primary to-accent rounded-md flex items-center justify-center overflow-hidden">
+                <img 
+                  src="/lovable-uploads/c132ba01-a3d0-428f-b28c-b79c0dd048e7.png" 
+                  alt="Ahmed Hossam" 
+                  className="h-full w-full object-cover"
+                />
               </div>
               <span className="font-bold text-xl">Ahmed Hossam</span>
             </div>

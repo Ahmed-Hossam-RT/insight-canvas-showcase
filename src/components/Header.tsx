@@ -24,6 +24,7 @@ const Header: React.FC = () => {
       setActiveSection('about'); // Default to about on homepage with no hash
     }
   }, [location]);
+  
   const isActive = (section: string) => {
     // Handle both hash-based and path-based sections
     if (section.startsWith('#')) {
@@ -32,9 +33,11 @@ const Header: React.FC = () => {
       return activeSection === section.substring(1) || location.pathname === section;
     }
   };
+  
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
+  
   const handleShareClick = () => {
     if (navigator.share) {
       navigator.share({
@@ -52,23 +55,18 @@ const Header: React.FC = () => {
       });
     }
   };
+  
   return <header className="sticky top-0 z-50 py-4 px-4 md:px-6 flex items-center justify-between w-full max-w-7xl mx-auto backdrop-blur-md bg-background/80 border-b border-border">
       <div className="flex items-center space-x-2">
         <Link to="/" className="flex items-center space-x-2 group">
-          <div className="h-8 w-8 bg-gradient-to-br from-primary to-accent rounded-md flex items-center justify-center transition-transform group-hover:scale-110 duration-300">
-            <span className="text-white font-bold text-lg">A</span>
+          <div className="h-8 w-8 bg-gradient-to-br from-primary to-accent rounded-md flex items-center justify-center transition-transform group-hover:scale-110 duration-300 overflow-hidden">
+            <img 
+              src="/lovable-uploads/c132ba01-a3d0-428f-b28c-b79c0dd048e7.png" 
+              alt="Ahmed Hossam" 
+              className="h-full w-full object-cover"
+            />
           </div>
           <span className="font-bold text-xl group-hover:text-primary transition-colors duration-300">Ahmed Hossam</span>
-          <Avatar className="h-8 w-8 border border-white/20 shadow-sm hover:scale-105 transition-transform duration-300">
-            <AvatarImage 
-              src="/lovable-uploads/c132ba01-a3d0-428f-b28c-b79c0dd048e7.png" 
-              alt="Ahmed Hossam Profile Photo" 
-              className="object-cover rounded-full"
-            />
-            <AvatarFallback className="bg-gradient-to-br from-primary to-accent">
-              <span className="text-white text-xs font-bold">AH</span>
-            </AvatarFallback>
-          </Avatar>
         </Link>
       </div>
       
