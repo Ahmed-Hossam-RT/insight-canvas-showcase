@@ -1,16 +1,17 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Calendar, Award, ExternalLink } from 'lucide-react';
+import { Calendar, Award, ExternalLink, FileText } from 'lucide-react';
 import { Certificate } from '@/types/certificate';
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 
 interface CertificateGridProps {
   certificates: Certificate[];
+  onCertificateClick: (certificate: Certificate) => void;
 }
 
-const CertificateGrid: React.FC<CertificateGridProps> = ({ certificates }) => {
+const CertificateGrid: React.FC<CertificateGridProps> = ({ certificates, onCertificateClick }) => {
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
       {certificates.map((certificate, index) => (
@@ -20,6 +21,8 @@ const CertificateGrid: React.FC<CertificateGridProps> = ({ certificates }) => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: index * 0.1 }}
           whileHover={{ scale: 1.03 }}
+          onClick={() => onCertificateClick(certificate)}
+          className="cursor-pointer"
         >
           <Card className="overflow-hidden h-full light-card dark:border-analyst-orange/20 dark:bg-gradient-to-br dark:from-analyst-darkgrey dark:to-analyst-black">
             <div className="relative h-48 bg-gray-100 dark:bg-gray-700">
@@ -34,6 +37,10 @@ const CertificateGrid: React.FC<CertificateGridProps> = ({ certificates }) => {
                       target.src = "/placeholder.svg";
                     }}
                   />
+                ) : certificate.pdfPath ? (
+                  <div className="flex items-center justify-center w-full h-full bg-gray-50 dark:bg-gray-800">
+                    <FileText className="h-16 w-16 text-primary/30 dark:text-analyst-orange/30" />
+                  </div>
                 ) : (
                   <div className="flex items-center justify-center w-full h-full">
                     <Award className="h-16 w-16 text-primary/30 dark:text-analyst-orange/30" />
@@ -55,23 +62,44 @@ const CertificateGrid: React.FC<CertificateGridProps> = ({ certificates }) => {
                   <span>{certificate.issueDate}</span>
                 </div>
               </div>
-              {certificate.credentialUrl && (
-                <Button 
-                  variant="ghost" 
-                  size="sm" 
-                  className="mt-4 w-full justify-center text-primary hover:bg-primary/10 dark:text-white dark:hover:bg-white/10"
-                  asChild
-                >
-                  <a 
-                    href={certificate.credentialUrl} 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="flex items-center gap-2"
-                  >
-                    <span>View Credential</span>
-                    <ExternalLink className="h-3 w-3" />
-                  </a>
-                </Button>
+              {(certificate.credentialUrl || certificate.pdfPath) && (
+                <div className="mt-4 flex space-x-2">
+                  {certificate.credentialUrl && (
+                    <Button 
+                      variant="ghost" 
+                      size="sm" 
+                      className="flex-1 justify-center text-primary hover:bg-primary/10 dark:text-white dark:hover:bg-white/10"
+                      asChild
+                      onClick={(e) => {
+                        e.stopPropagation(); // Prevent triggering the card click
+                      }}
+                    >
+                      <a 
+                        href={certificate.credentialUrl} 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        className="flex items-center gap-2"
+                      >
+                        <span>Credential</span>
+                        <ExternalLink className="h-3 w-3" />
+                      </a>
+                    </Button>
+                  )}
+                  {certificate.pdfPath && (
+                    <Button 
+                      variant="ghost" 
+                      size="sm" 
+                      className="flex-1 justify-center text-primary hover:bg-primary/10 dark:text-white dark:hover:bg-white/10"
+                      onClick={(e) => {
+                        e.stopPropagation(); // Prevent triggering the card click
+                        window.open(certificate.pdfPath, '_blank');
+                      }}
+                    >
+                      <span>View PDF</span>
+                      <FileText className="ml-1 h-3 w-3" />
+                    </Button>
+                  )}
+                </div>
               )}
             </CardContent>
           </Card>

@@ -8,4 +8,5 @@ export interface Certificate {
   description: string;
   image?: string;
   credentialUrl?: string;
+  pdfPath?: string;
 }
