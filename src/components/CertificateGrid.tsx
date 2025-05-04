@@ -27,7 +27,17 @@ const CertificateGrid: React.FC<CertificateGridProps> = ({ certificates, onCerti
           <Card className="overflow-hidden h-full light-card dark:border-analyst-orange/20 dark:bg-gradient-to-br dark:from-analyst-darkgrey dark:to-analyst-black">
             <div className="relative h-48 bg-gray-100 dark:bg-gray-700">
               <div className="absolute inset-0 flex items-center justify-center">
-                {certificate.image ? (
+                {certificate.thumbnail ? (
+                  <img 
+                    src={certificate.thumbnail} 
+                    alt={certificate.title}
+                    className="object-cover w-full h-full"
+                    onError={(e) => {
+                      const target = e.target as HTMLImageElement;
+                      target.src = "/placeholder.svg";
+                    }}
+                  />
+                ) : certificate.image ? (
                   <img 
                     src={certificate.image} 
                     alt={certificate.title}

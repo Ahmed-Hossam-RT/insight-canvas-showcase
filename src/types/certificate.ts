@@ -9,4 +9,5 @@ export interface Certificate {
   image?: string;
   credentialUrl?: string;
   pdfPath?: string;
+  thumbnail?: string; // Added for certificate thumbnails in grid view
 }

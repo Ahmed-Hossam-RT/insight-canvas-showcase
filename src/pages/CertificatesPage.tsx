@@ -40,7 +40,8 @@ const CertificatesPage = () => {
       issueDate: 'June 2023',
       domain: 'Power BI',
       description: 'Certification validating skills in creating and maintaining Power BI dashboards, performing data analysis, and transforming data into actionable insights.',
-      image: '/certificates/power-bi-cert.jpg',
+      image: '/certificates/images/power-bi-cert.jpg',
+      thumbnail: 'https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?q=80&w=400&auto=format',
       credentialUrl: 'https://www.credly.com/badges/microsoft-certified-power-bi-data-analyst'
     }, 
     {
@@ -50,7 +51,8 @@ const CertificatesPage = () => {
       issueDate: 'March 2023',
       domain: 'Data Engineer',
       description: 'Specialization in designing, building, and maintaining data processing systems with a focus on reliability, efficiency, and security.',
-      image: '/certificates/gcp-data-engineering.jpg',
+      image: '/certificates/images/gcp-data-engineering.jpg',
+      thumbnail: 'https://images.unsplash.com/photo-1461749280684-dccba630e2f6?q=80&w=400&auto=format',
       credentialUrl: 'https://www.coursera.org/account/accomplishments/specialization/data-engineering-gcp'
     }, 
     {
@@ -60,7 +62,8 @@ const CertificatesPage = () => {
       issueDate: 'January 2023',
       domain: 'SQL',
       description: 'Advanced course covering complex SQL queries, optimization techniques, and data manipulation for analytical purposes.',
-      image: '/certificates/sql-advanced.jpg',
+      image: '/certificates/images/sql-advanced.jpg',
+      thumbnail: 'https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=400&auto=format',
       credentialUrl: 'https://www.datacamp.com/certificate/SQL-advanced',
       pdfPath: '/Certificates/PDF/Data manipulation in SQL.pdf'
     }, 
@@ -71,7 +74,8 @@ const CertificatesPage = () => {
       issueDate: 'November 2022',
       domain: 'Cloud',
       description: 'Validates technical expertise in designing and maintaining AWS data analytics solutions.',
-      image: '/certificates/aws-analytics.jpg',
+      image: '/certificates/images/aws-analytics.jpg',
+      thumbnail: 'https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?q=80&w=400&auto=format',
       credentialUrl: 'https://www.credly.com/badges/aws-certified-data-analytics-specialty'
     }, 
     {
@@ -81,7 +85,8 @@ const CertificatesPage = () => {
       issueDate: 'October 2022',
       domain: 'Data Analyst',
       description: 'Comprehensive track covering Python libraries for data analysis including Pandas, NumPy, and Matplotlib.',
-      image: '/certificates/python-analyst.jpg',
+      image: '/certificates/images/python-analyst.jpg',
+      thumbnail: 'https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=400&auto=format',
       credentialUrl: 'https://www.datacamp.com/certificate/data-analyst-with-python'
     },
     {
@@ -91,7 +96,8 @@ const CertificatesPage = () => {
       issueDate: 'August 2022',
       domain: 'Machine Learning',
       description: 'Introduction to machine learning algorithms, techniques, and practical applications in data science.',
-      image: '/certificates/ml-fundamentals.jpg',
+      image: '/certificates/images/ml-fundamentals.jpg',
+      thumbnail: 'https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?q=80&w=400&auto=format',
       credentialUrl: 'https://www.coursera.org/account/accomplishments/verify/ML-fundamentals'
     },
     {
@@ -102,6 +108,7 @@ const CertificatesPage = () => {
       domain: 'SQL',
       description: 'Comprehensive course on SQL data manipulation techniques, including joins, subqueries, and advanced filtering.',
       image: '/certificates/images/sql-manipulation.jpg',
+      thumbnail: 'https://images.unsplash.com/photo-1461749280684-dccba630e2f6?q=80&w=400&auto=format',
       pdfPath: '/Certificates/PDF/Data manipulation in SQL.pdf'
     },
     {
@@ -112,6 +119,7 @@ const CertificatesPage = () => {
       domain: 'SQL',
       description: 'Course focused on using SQL for data analysis and making informed business decisions based on database insights.',
       image: '/certificates/images/sql-decision-making.jpg',
+      thumbnail: 'https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?q=80&w=400&auto=format',
       pdfPath: '/Certificates/PDF/Data-Driven Decision Making in SQL.pdf'
     },
     {
@@ -122,6 +130,7 @@ const CertificatesPage = () => {
       domain: 'SQL',
       description: 'Course covering techniques for exploring and extracting insights from data using SQL queries and analysis.',
       image: '/certificates/images/sql-exploratory.jpg',
+      thumbnail: 'https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=400&auto=format',
       pdfPath: '/Certificates/PDF/Exploratory Data Analysis in SQL.pdf'
     },
     {
@@ -132,6 +141,7 @@ const CertificatesPage = () => {
       domain: 'SQL',
       description: 'Specialized course on PostgreSQL functions and techniques for advanced data manipulation and analysis.',
       image: '/certificates/images/postgresql-functions.jpg',
+      thumbnail: 'https://images.unsplash.com/photo-1461749280684-dccba630e2f6?q=80&w=400&auto=format',
       pdfPath: '/Certificates/PDF/Functions for Manipulating Data in POSTGRE SQL.pdf'
     },
     {
@@ -142,6 +152,7 @@ const CertificatesPage = () => {
       domain: 'SQL',
       description: 'In-depth course on PostgreSQL window functions and statistical analysis methods for data aggregation.',
       image: '/certificates/images/postgresql-window.jpg',
+      thumbnail: 'https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?q=80&w=400&auto=format',
       pdfPath: '/Certificates/PDF/PostgreSQL Summary Stats and Window Functions.pdf'
     },
     {
@@ -152,6 +163,7 @@ const CertificatesPage = () => {
       domain: 'SQL',
       description: 'Comprehensive course on SQL join operations, including inner, outer, cross joins, and union operations.',
       image: '/certificates/images/sql-joining.jpg',
+      thumbnail: 'https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=400&auto=format',
       pdfPath: '/Certificates/PDF/joining data in SQL.pdf'
     },
     {
@@ -162,6 +174,7 @@ const CertificatesPage = () => {
       domain: 'SQL',
       description: 'Professional certification validating SQL skills for data analysis roles and database query optimization.',
       image: '/certificates/images/sql-associate.jpg',
+      thumbnail: 'https://images.unsplash.com/photo-1461749280684-dccba630e2f6?q=80&w=400&auto=format',
       pdfPath: '/Certificates/PDF/associate data analyst in SQL.pdf'
     }
   ];

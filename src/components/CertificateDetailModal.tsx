@@ -78,6 +78,14 @@ export function CertificateDetailModal({
                 className="max-h-full max-w-full object-contain rounded-md"
               />
             </div>
+          ) : certificate.thumbnail ? (
+            <div className="flex justify-center items-center h-full">
+              <img
+                src={certificate.thumbnail}
+                alt={certificate.title}
+                className="max-h-full max-w-full object-contain rounded-md"
+              />
+            </div>
           ) : (
             <div className="flex items-center justify-center h-full bg-muted rounded-md">
               <FileText className="h-24 w-24 text-muted-foreground/30" />
