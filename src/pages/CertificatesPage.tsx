@@ -266,6 +266,157 @@ const CertificatesPage = () => {
       description: 'Specialized course on sampling techniques and methodologies for data analysis in Python.',
       thumbnail: 'https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?q=80&w=400&auto=format',
       pdfPath: '/Certificates/python/Sampling in Python.pdf'
+    },
+    // Power BI Certificates
+    {
+      id: '23',
+      title: 'Introduction to Power BI',
+      issuer: 'DataCamp',
+      issueDate: 'January 2023',
+      domain: 'Power BI',
+      description: 'Fundamental course covering Power BI basics, interface navigation, and creating simple dashboards.',
+      thumbnail: 'https://images.unsplash.com/photo-1543286386-713bdd548da4?q=80&w=400&auto=format',
+      pdfPath: '/Certificates/Power bi/Introduction to Power BI.pdf'
+    },
+    {
+      id: '24',
+      title: 'Data Preparation in Power BI',
+      issuer: 'DataCamp',
+      issueDate: 'February 2023',
+      domain: 'Power BI',
+      description: 'Course on preparing, cleaning and transforming data before analysis in Power BI.',
+      thumbnail: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=400&auto=format',
+      pdfPath: '/Certificates/Power bi/Data Preparation in Power BI.pdf'
+    },
+    {
+      id: '25',
+      title: 'Data Modeling in Power BI',
+      issuer: 'DataCamp',
+      issueDate: 'March 2023',
+      domain: 'Power BI',
+      description: 'In-depth training on creating effective data models and relationships in Power BI.',
+      thumbnail: 'https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?q=80&w=400&auto=format',
+      pdfPath: '/Certificates/Power bi/Data Modeling in Power BI.pdf'
+    },
+    {
+      id: '26',
+      title: 'Data Transformation in Power BI',
+      issuer: 'DataCamp',
+      issueDate: 'April 2023',
+      domain: 'Power BI',
+      description: 'Advanced techniques for transforming and reshaping data in Power BI using Power Query Editor.',
+      thumbnail: 'https://images.unsplash.com/photo-1587654780291-39c9404d746b?q=80&w=400&auto=format',
+      pdfPath: '/Certificates/Power bi/Data Transformation in Power BI.pdf'
+    },
+    {
+      id: '27',
+      title: 'Data Connections in Power BI',
+      issuer: 'DataCamp',
+      issueDate: 'May 2023',
+      domain: 'Power BI',
+      description: 'Course covering various data source connections and integration methods in Power BI.',
+      thumbnail: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=400&auto=format',
+      pdfPath: '/Certificates/Power bi/Data Connections in Power BI.pdf'
+    },
+    {
+      id: '28',
+      title: 'Data Visualization in Power BI',
+      issuer: 'DataCamp',
+      issueDate: 'June 2023',
+      domain: 'Power BI',
+      description: 'Comprehensive course on creating effective and interactive data visualizations in Power BI.',
+      thumbnail: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=400&auto=format',
+      pdfPath: '/Certificates/Power bi/Data Visualization in Power BI.pdf'
+    },
+    {
+      id: '29',
+      title: 'Introduction to DAX in Power BI',
+      issuer: 'DataCamp',
+      issueDate: 'July 2023',
+      domain: 'Power BI',
+      description: 'Foundation course on Data Analysis Expressions (DAX) for calculations and metrics in Power BI.',
+      thumbnail: 'https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?q=80&w=400&auto=format',
+      pdfPath: '/Certificates/Power bi/Introduction to DAX in Power BI.pdf'
+    },
+    {
+      id: '30',
+      title: 'Intermediate DAX in Power BI',
+      issuer: 'DataCamp',
+      issueDate: 'August 2023',
+      domain: 'Power BI',
+      description: 'Advanced DAX functions and techniques for complex calculations and business rules in Power BI.',
+      thumbnail: 'https://images.unsplash.com/photo-1587654780291-39c9404d746b?q=80&w=400&auto=format',
+      pdfPath: '/Certificates/Power bi/Intermediate DAX in Power BI.pdf'
+    },
+    {
+      id: '31',
+      title: 'DAX Functions in Power BI',
+      issuer: 'DataCamp',
+      issueDate: 'September 2023',
+      domain: 'Power BI',
+      description: 'Specialized course on utilizing built-in DAX functions for sophisticated data analysis in Power BI.',
+      thumbnail: 'https://images.unsplash.com/photo-1543286386-713bdd548da4?q=80&w=400&auto=format',
+      pdfPath: '/Certificates/Power bi/DAX Functions in Power BI.pdf'
+    },
+    {
+      id: '32',
+      title: 'Intermediate Data Modeling in Power BI',
+      issuer: 'DataCamp',
+      issueDate: 'October 2023',
+      domain: 'Power BI',
+      description: 'Advanced modeling techniques including many-to-many relationships and role-playing dimensions in Power BI.',
+      thumbnail: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=400&auto=format',
+      pdfPath: '/Certificates/Power bi/Intermediate Data Modeling in Power BI.pdf'
+    },
+    {
+      id: '33',
+      title: 'Reports in Power BI',
+      issuer: 'DataCamp',
+      issueDate: 'November 2023',
+      domain: 'Power BI',
+      description: 'Comprehensive training on building effective reports with filters, bookmarks, and navigation in Power BI.',
+      thumbnail: 'https://images.unsplash.com/photo-1587654780291-39c9404d746b?q=80&w=400&auto=format',
+      pdfPath: '/Certificates/Power bi/Reports in Power BI.pdf'
+    },
+    {
+      id: '34',
+      title: 'Report Design in Power BI',
+      issuer: 'DataCamp',
+      issueDate: 'December 2023',
+      domain: 'Power BI',
+      description: 'Course focusing on design principles, layouts, and accessibility for professional Power BI reports.',
+      thumbnail: 'https://images.unsplash.com/photo-1543286386-713bdd548da4?q=80&w=400&auto=format',
+      pdfPath: '/Certificates/Power bi/Report Design in Power BI.pdf'
+    },
+    {
+      id: '35',
+      title: 'Trend Analysis in Power BI',
+      issuer: 'DataCamp',
+      issueDate: 'January 2024',
+      domain: 'Power BI',
+      description: 'Specialized course on time series analysis, forecasting, and trend visualization in Power BI.',
+      thumbnail: 'https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?q=80&w=400&auto=format',
+      pdfPath: '/Certificates/Power bi/Trend Analysis in Power BI.pdf'
+    },
+    {
+      id: '36',
+      title: 'Exploratory Data Analysis in Power BI',
+      issuer: 'DataCamp',
+      issueDate: 'February 2024',
+      domain: 'Power BI',
+      description: 'Techniques for exploring datasets, identifying patterns, and extracting insights using Power BI tools.',
+      thumbnail: 'https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?q=80&w=400&auto=format',
+      pdfPath: '/Certificates/Power bi/Exploratory Data Analysis in Power BI.pdf'
+    },
+    {
+      id: '37',
+      title: 'Deploying and Maintaining Assets in Power BI',
+      issuer: 'DataCamp',
+      issueDate: 'March 2024',
+      domain: 'Power BI',
+      description: 'Best practices for deploying, sharing, and maintaining Power BI dashboards and reports in production environments.',
+      thumbnail: 'https://images.unsplash.com/photo-1543286386-713bdd548da4?q=80&w=400&auto=format',
+      pdfPath: '/Certificates/Power bi/Deploying and Maintaining Assets in Power BI.pdf'
     }
   ];
 

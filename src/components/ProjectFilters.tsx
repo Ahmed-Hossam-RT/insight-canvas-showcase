@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Button } from "@/components/ui/button";
 import { Filter } from 'lucide-react';
@@ -9,7 +8,6 @@ const categories = [
   "Research", 
   "Customer Analysis", 
   "Sales", 
-  "Visualization", 
   "Finance", 
   "Digital", 
   "Operations", 

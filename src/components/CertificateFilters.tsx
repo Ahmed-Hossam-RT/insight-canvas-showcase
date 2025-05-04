@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Button } from "@/components/ui/button";
 import { Filter } from 'lucide-react';
@@ -11,8 +10,7 @@ const domains = [
   "Cloud", 
   "Data Analyst", 
   "Machine Learning",
-  "Python",
-  "Visualization"
+  "Python"
 ];
 
 interface CertificateFiltersProps {
