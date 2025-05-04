@@ -10,7 +10,8 @@ const domains = [
   "SQL", 
   "Cloud", 
   "Data Analyst", 
-  "Machine Learning", 
+  "Machine Learning",
+  "Python",
   "Visualization"
 ];
 

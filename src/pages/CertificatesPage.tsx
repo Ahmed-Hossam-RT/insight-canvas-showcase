@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { ChevronLeft, Upload, Download } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
@@ -176,6 +175,97 @@ const CertificatesPage = () => {
       image: '/certificates/images/sql-associate.jpg',
       thumbnail: 'https://images.unsplash.com/photo-1461749280684-dccba630e2f6?q=80&w=400&auto=format',
       pdfPath: '/Certificates/PDF/associate data analyst in SQL.pdf'
+    },
+    // Python Certificates
+    {
+      id: '14',
+      title: 'Data Analyst in Python',
+      issuer: 'DataCamp',
+      issueDate: 'July 2022',
+      domain: 'Python',
+      description: 'Complete career track covering Python fundamentals, data manipulation, and analysis for professional data analyst roles.',
+      thumbnail: 'https://images.unsplash.com/photo-1461749280684-dccba630e2f6?q=80&w=400&auto=format',
+      pdfPath: '/Certificates/python/Data analyst in python.pdf'
+    },
+    {
+      id: '15',
+      title: 'Introduction to Python',
+      issuer: 'DataCamp',
+      issueDate: 'June 2022',
+      domain: 'Python',
+      description: 'Fundamental course covering Python syntax, data types, functions, and basic programming concepts.',
+      thumbnail: 'https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=400&auto=format',
+      pdfPath: '/Certificates/python/introduction to python.pdf'
+    },
+    {
+      id: '16',
+      title: 'Data Manipulation with pandas',
+      issuer: 'DataCamp',
+      issueDate: 'August 2022',
+      domain: 'Python',
+      description: 'Comprehensive course on using pandas library for data manipulation, cleaning, and preparation in Python.',
+      thumbnail: 'https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?q=80&w=400&auto=format',
+      pdfPath: '/Certificates/python/Data Manipulation with pandas.pdf'
+    },
+    {
+      id: '17',
+      title: 'Joining Data with pandas',
+      issuer: 'DataCamp',
+      issueDate: 'September 2022',
+      domain: 'Python',
+      description: 'Advanced techniques for combining and merging datasets using pandas, including various join operations.',
+      thumbnail: 'https://images.unsplash.com/photo-1461749280684-dccba630e2f6?q=80&w=400&auto=format',
+      pdfPath: '/Certificates/python/Joining Data with pandas.pdf'
+    },
+    {
+      id: '18',
+      title: 'Introduction to Data Visualization with Matplotlib',
+      issuer: 'DataCamp',
+      issueDate: 'October 2022',
+      domain: 'Python',
+      description: 'Foundation course on creating effective data visualizations in Python using the Matplotlib library.',
+      thumbnail: 'https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=400&auto=format',
+      pdfPath: '/Certificates/python/Introduction to Data Visualization with.pdf'
+    },
+    {
+      id: '19',
+      title: 'Exploratory Data Analysis in Python',
+      issuer: 'DataCamp',
+      issueDate: 'November 2022',
+      domain: 'Python',
+      description: 'Techniques for exploring datasets, detecting patterns, and extracting insights using Python statistical tools.',
+      thumbnail: 'https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?q=80&w=400&auto=format',
+      pdfPath: '/Certificates/python/Exploratory Data Analysis in Python.pdf'
+    },
+    {
+      id: '20',
+      title: 'Introduction to Statistics in Python',
+      issuer: 'DataCamp',
+      issueDate: 'December 2022',
+      domain: 'Python',
+      description: 'Course covering fundamental statistical concepts and their implementation using Python libraries.',
+      thumbnail: 'https://images.unsplash.com/photo-1461749280684-dccba630e2f6?q=80&w=400&auto=format',
+      pdfPath: '/Certificates/python/Introduction to Statistics in Python.pdf'
+    },
+    {
+      id: '21',
+      title: 'Hypothesis Testing in Python',
+      issuer: 'DataCamp',
+      issueDate: 'January 2023',
+      domain: 'Python',
+      description: 'Advanced course on statistical hypothesis testing methods and implementations in Python.',
+      thumbnail: 'https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=400&auto=format',
+      pdfPath: '/Certificates/python/Hypothesis Testing in Python.pdf'
+    },
+    {
+      id: '22',
+      title: 'Sampling in Python',
+      issuer: 'DataCamp',
+      issueDate: 'February 2023',
+      domain: 'Python',
+      description: 'Specialized course on sampling techniques and methodologies for data analysis in Python.',
+      thumbnail: 'https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?q=80&w=400&auto=format',
+      pdfPath: '/Certificates/python/Sampling in Python.pdf'
     }
   ];
 
