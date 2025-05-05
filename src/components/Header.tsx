@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect } from 'react';
 import { Button } from "@/components/ui/button";
 import { ThemeToggle } from "./ThemeToggle";
@@ -39,15 +40,18 @@ const Header: React.FC = () => {
   };
   
   const handleShareClick = () => {
+    const shareData = {
+      title: 'Ahmed Hossam Portfolio',
+      text: 'Check out Ahmed Hossam\'s Data Analyst Portfolio',
+      url: window.location.href
+    };
+    
     if (navigator.share) {
-      navigator.share({
-        title: 'Ahmed Hossam | Data Analyst Portfolio',
-        url: window.location.href
-      })
+      navigator.share(shareData)
       .catch((error) => console.log('Error sharing:', error));
     } else {
       navigator.clipboard.writeText(window.location.href).then(() => {
-        toast.success("Link copied to clipboard!");
+        toast.success("Portfolio link copied to clipboard!");
       })
       .catch((error) => {
         toast.error("Failed to copy link");
@@ -102,11 +106,17 @@ const Header: React.FC = () => {
           </NavigationMenuItem>
           <NavigationMenuItem>
             <Link to="/#contact">
-              
+              <NavigationMenuLink className={`${navigationMenuTriggerStyle()} ${isActive('#contact') ? 'bg-primary/10 text-primary' : ''}`}>
+                Contact
+              </NavigationMenuLink>
             </Link>
           </NavigationMenuItem>
           <NavigationMenuItem>
-            
+            <Link to="/certificates">
+              <NavigationMenuLink className={`${navigationMenuTriggerStyle()} ${isActive('/certificates') ? 'bg-primary/10 text-primary' : ''}`}>
+                Certificates
+              </NavigationMenuLink>
+            </Link>
           </NavigationMenuItem>
         </NavigationMenuList>
       </NavigationMenu>
@@ -135,6 +145,7 @@ const Header: React.FC = () => {
               <Link to="/#work" className={`text-foreground hover:text-primary transition-colors py-2 border-b border-border ${isActive('#work') ? 'text-primary font-medium' : ''}`}>Work</Link>
               <Link to="/skills" className={`text-foreground hover:text-primary transition-colors py-2 border-b border-border ${isActive('/skills') ? 'text-primary font-medium' : ''}`}>Skills</Link>
               <Link to="/#contact" className={`text-foreground hover:text-primary transition-colors py-2 border-b border-border ${isActive('#contact') ? 'text-primary font-medium' : ''}`}>Contact</Link>
+              <Link to="/certificates" className={`text-foreground hover:text-primary transition-colors py-2 border-b border-border ${isActive('/certificates') ? 'text-primary font-medium' : ''}`}>Certificates</Link>
               <a href="https://www.linkedin.com/in/ahmed-hossam-913b19121" target="_blank" rel="noopener noreferrer" className="text-foreground hover:text-primary transition-colors py-2 flex items-center gap-2">
                 <Linkedin className="h-4 w-4" />
                 LinkedIn
