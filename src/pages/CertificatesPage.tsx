@@ -1,5 +1,6 @@
+
 import React, { useState } from 'react';
-import { ChevronLeft, Upload, Download } from 'lucide-react';
+import { ChevronLeft } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
@@ -9,6 +10,7 @@ import CertificateGrid from '@/components/CertificateGrid';
 import { Certificate } from '@/types/certificate';
 import { motion } from 'framer-motion';
 import { CertificateDetailModal } from '@/components/CertificateDetailModal';
+import { certificates } from '@/data/certificates';
 
 const CertificatesPage = () => {
   const navigate = useNavigate();
@@ -31,427 +33,40 @@ const CertificatesPage = () => {
     setSelectedCertificate(null);
   };
   
-  const certificates: Certificate[] = [
-    {
-      id: '1',
-      title: 'Microsoft Certified: Power BI Data Analyst Associate',
-      issuer: 'Microsoft',
-      issueDate: 'June 2023',
-      domain: 'Power BI',
-      description: 'Certification validating skills in creating and maintaining Power BI dashboards, performing data analysis, and transforming data into actionable insights.',
-      image: '/certificates/images/power-bi-cert.jpg',
-      thumbnail: 'https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?q=80&w=400&auto=format',
-      credentialUrl: 'https://www.credly.com/badges/microsoft-certified-power-bi-data-analyst'
-    }, 
-    {
-      id: '2',
-      title: 'Data Engineering on Google Cloud Platform',
-      issuer: 'Google Cloud',
-      issueDate: 'March 2023',
-      domain: 'Data Engineer',
-      description: 'Specialization in designing, building, and maintaining data processing systems with a focus on reliability, efficiency, and security.',
-      image: '/certificates/images/gcp-data-engineering.jpg',
-      thumbnail: 'https://images.unsplash.com/photo-1461749280684-dccba630e2f6?q=80&w=400&auto=format',
-      credentialUrl: 'https://www.coursera.org/account/accomplishments/specialization/data-engineering-gcp'
-    }, 
-    {
-      id: '3',
-      title: 'Advanced SQL for Data Analysis',
-      issuer: 'DataCamp',
-      issueDate: 'January 2023',
-      domain: 'SQL',
-      description: 'Advanced course covering complex SQL queries, optimization techniques, and data manipulation for analytical purposes.',
-      image: '/certificates/images/sql-advanced.jpg',
-      thumbnail: 'https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=400&auto=format',
-      credentialUrl: 'https://www.datacamp.com/certificate/SQL-advanced',
-      pdfPath: '/Certificates/PDF/Data manipulation in SQL.pdf'
-    }, 
-    {
-      id: '4',
-      title: 'AWS Certified Data Analytics - Specialty',
-      issuer: 'Amazon Web Services',
-      issueDate: 'November 2022',
-      domain: 'Cloud',
-      description: 'Validates technical expertise in designing and maintaining AWS data analytics solutions.',
-      image: '/certificates/images/aws-analytics.jpg',
-      thumbnail: 'https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?q=80&w=400&auto=format',
-      credentialUrl: 'https://www.credly.com/badges/aws-certified-data-analytics-specialty'
-    }, 
-    {
-      id: '5',
-      title: 'Data Analyst with Python',
-      issuer: 'DataCamp',
-      issueDate: 'October 2022',
-      domain: 'Data Analyst',
-      description: 'Comprehensive track covering Python libraries for data analysis including Pandas, NumPy, and Matplotlib.',
-      image: '/certificates/images/python-analyst.jpg',
-      thumbnail: 'https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=400&auto=format',
-      credentialUrl: 'https://www.datacamp.com/certificate/data-analyst-with-python'
-    },
-    {
-      id: '6',
-      title: 'Machine Learning Fundamentals',
-      issuer: 'Coursera',
-      issueDate: 'August 2022',
-      domain: 'Machine Learning',
-      description: 'Introduction to machine learning algorithms, techniques, and practical applications in data science.',
-      image: '/certificates/images/ml-fundamentals.jpg',
-      thumbnail: 'https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?q=80&w=400&auto=format',
-      credentialUrl: 'https://www.coursera.org/account/accomplishments/verify/ML-fundamentals'
-    },
-    {
-      id: '7',
-      title: 'Data Manipulation in SQL',
-      issuer: 'DataCamp',
-      issueDate: 'May 2022',
-      domain: 'SQL',
-      description: 'Comprehensive course on SQL data manipulation techniques, including joins, subqueries, and advanced filtering.',
-      image: '/certificates/images/sql-manipulation.jpg',
-      thumbnail: 'https://images.unsplash.com/photo-1461749280684-dccba630e2f6?q=80&w=400&auto=format',
-      pdfPath: '/Certificates/PDF/Data manipulation in SQL.pdf'
-    },
-    {
-      id: '8',
-      title: 'Data-Driven Decision Making in SQL',
-      issuer: 'DataCamp',
-      issueDate: 'April 2022',
-      domain: 'SQL',
-      description: 'Course focused on using SQL for data analysis and making informed business decisions based on database insights.',
-      image: '/certificates/images/sql-decision-making.jpg',
-      thumbnail: 'https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?q=80&w=400&auto=format',
-      pdfPath: '/Certificates/PDF/Data-Driven Decision Making in SQL.pdf'
-    },
-    {
-      id: '9',
-      title: 'Exploratory Data Analysis in SQL',
-      issuer: 'DataCamp',
-      issueDate: 'March 2022',
-      domain: 'SQL',
-      description: 'Course covering techniques for exploring and extracting insights from data using SQL queries and analysis.',
-      image: '/certificates/images/sql-exploratory.jpg',
-      thumbnail: 'https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=400&auto=format',
-      pdfPath: '/Certificates/PDF/Exploratory Data Analysis in SQL.pdf'
-    },
-    {
-      id: '10',
-      title: 'Functions for Manipulating Data in PostgreSQL',
-      issuer: 'DataCamp',
-      issueDate: 'February 2022',
-      domain: 'SQL',
-      description: 'Specialized course on PostgreSQL functions and techniques for advanced data manipulation and analysis.',
-      image: '/certificates/images/postgresql-functions.jpg',
-      thumbnail: 'https://images.unsplash.com/photo-1461749280684-dccba630e2f6?q=80&w=400&auto=format',
-      pdfPath: '/Certificates/PDF/Functions for Manipulating Data in POSTGRE SQL.pdf'
-    },
-    {
-      id: '11',
-      title: 'PostgreSQL Summary Stats and Window Functions',
-      issuer: 'DataCamp',
-      issueDate: 'January 2022',
-      domain: 'SQL',
-      description: 'In-depth course on PostgreSQL window functions and statistical analysis methods for data aggregation.',
-      image: '/certificates/images/postgresql-window.jpg',
-      thumbnail: 'https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?q=80&w=400&auto=format',
-      pdfPath: '/Certificates/PDF/PostgreSQL Summary Stats and Window Functions.pdf'
-    },
-    {
-      id: '12',
-      title: 'Joining Data in SQL',
-      issuer: 'DataCamp',
-      issueDate: 'December 2021',
-      domain: 'SQL',
-      description: 'Comprehensive course on SQL join operations, including inner, outer, cross joins, and union operations.',
-      image: '/certificates/images/sql-joining.jpg',
-      thumbnail: 'https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=400&auto=format',
-      pdfPath: '/Certificates/PDF/joining data in SQL.pdf'
-    },
-    {
-      id: '13',
-      title: 'Associate Data Analyst in SQL',
-      issuer: 'DataCamp',
-      issueDate: 'November 2021',
-      domain: 'SQL',
-      description: 'Professional certification validating SQL skills for data analysis roles and database query optimization.',
-      image: '/certificates/images/sql-associate.jpg',
-      thumbnail: 'https://images.unsplash.com/photo-1461749280684-dccba630e2f6?q=80&w=400&auto=format',
-      pdfPath: '/Certificates/PDF/associate data analyst in SQL.pdf'
-    },
-    // Python Certificates
-    {
-      id: '14',
-      title: 'Data Analyst in Python',
-      issuer: 'DataCamp',
-      issueDate: 'July 2022',
-      domain: 'Python',
-      description: 'Complete career track covering Python fundamentals, data manipulation, and analysis for professional data analyst roles.',
-      thumbnail: 'https://images.unsplash.com/photo-1461749280684-dccba630e2f6?q=80&w=400&auto=format',
-      pdfPath: '/Certificates/python/Data analyst in python.pdf'
-    },
-    {
-      id: '15',
-      title: 'Introduction to Python',
-      issuer: 'DataCamp',
-      issueDate: 'June 2022',
-      domain: 'Python',
-      description: 'Fundamental course covering Python syntax, data types, functions, and basic programming concepts.',
-      thumbnail: 'https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=400&auto=format',
-      pdfPath: '/Certificates/python/introduction to python.pdf'
-    },
-    {
-      id: '16',
-      title: 'Data Manipulation with pandas',
-      issuer: 'DataCamp',
-      issueDate: 'August 2022',
-      domain: 'Python',
-      description: 'Comprehensive course on using pandas library for data manipulation, cleaning, and preparation in Python.',
-      thumbnail: 'https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?q=80&w=400&auto=format',
-      pdfPath: '/Certificates/python/Data Manipulation with pandas.pdf'
-    },
-    {
-      id: '17',
-      title: 'Joining Data with pandas',
-      issuer: 'DataCamp',
-      issueDate: 'September 2022',
-      domain: 'Python',
-      description: 'Advanced techniques for combining and merging datasets using pandas, including various join operations.',
-      thumbnail: 'https://images.unsplash.com/photo-1461749280684-dccba630e2f6?q=80&w=400&auto=format',
-      pdfPath: '/Certificates/python/Joining Data with pandas.pdf'
-    },
-    {
-      id: '18',
-      title: 'Introduction to Data Visualization with Matplotlib',
-      issuer: 'DataCamp',
-      issueDate: 'October 2022',
-      domain: 'Python',
-      description: 'Foundation course on creating effective data visualizations in Python using the Matplotlib library.',
-      thumbnail: 'https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=400&auto=format',
-      pdfPath: '/Certificates/python/Introduction to Data Visualization with.pdf'
-    },
-    {
-      id: '19',
-      title: 'Exploratory Data Analysis in Python',
-      issuer: 'DataCamp',
-      issueDate: 'November 2022',
-      domain: 'Python',
-      description: 'Techniques for exploring datasets, detecting patterns, and extracting insights using Python statistical tools.',
-      thumbnail: 'https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?q=80&w=400&auto=format',
-      pdfPath: '/Certificates/python/Exploratory Data Analysis in Python.pdf'
-    },
-    {
-      id: '20',
-      title: 'Introduction to Statistics in Python',
-      issuer: 'DataCamp',
-      issueDate: 'December 2022',
-      domain: 'Python',
-      description: 'Course covering fundamental statistical concepts and their implementation using Python libraries.',
-      thumbnail: 'https://images.unsplash.com/photo-1461749280684-dccba630e2f6?q=80&w=400&auto=format',
-      pdfPath: '/Certificates/python/Introduction to Statistics in Python.pdf'
-    },
-    {
-      id: '21',
-      title: 'Hypothesis Testing in Python',
-      issuer: 'DataCamp',
-      issueDate: 'January 2023',
-      domain: 'Python',
-      description: 'Advanced course on statistical hypothesis testing methods and implementations in Python.',
-      thumbnail: 'https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=400&auto=format',
-      pdfPath: '/Certificates/python/Hypothesis Testing in Python.pdf'
-    },
-    {
-      id: '22',
-      title: 'Sampling in Python',
-      issuer: 'DataCamp',
-      issueDate: 'February 2023',
-      domain: 'Python',
-      description: 'Specialized course on sampling techniques and methodologies for data analysis in Python.',
-      thumbnail: 'https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?q=80&w=400&auto=format',
-      pdfPath: '/Certificates/python/Sampling in Python.pdf'
-    },
-    // Power BI Certificates
-    {
-      id: '23',
-      title: 'Introduction to Power BI',
-      issuer: 'DataCamp',
-      issueDate: 'January 2023',
-      domain: 'Power BI',
-      description: 'Fundamental course covering Power BI basics, interface navigation, and creating simple dashboards.',
-      thumbnail: 'https://images.unsplash.com/photo-1543286386-713bdd548da4?q=80&w=400&auto=format',
-      pdfPath: '/Certificates/Power bi/Introduction to Power BI.pdf'
-    },
-    {
-      id: '24',
-      title: 'Data Preparation in Power BI',
-      issuer: 'DataCamp',
-      issueDate: 'February 2023',
-      domain: 'Power BI',
-      description: 'Course on preparing, cleaning and transforming data before analysis in Power BI.',
-      thumbnail: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=400&auto=format',
-      pdfPath: '/Certificates/Power bi/Data Preparation in Power BI.pdf'
-    },
-    {
-      id: '25',
-      title: 'Data Modeling in Power BI',
-      issuer: 'DataCamp',
-      issueDate: 'March 2023',
-      domain: 'Power BI',
-      description: 'In-depth training on creating effective data models and relationships in Power BI.',
-      thumbnail: 'https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?q=80&w=400&auto=format',
-      pdfPath: '/Certificates/Power bi/Data Modeling in Power BI.pdf'
-    },
-    {
-      id: '26',
-      title: 'Data Transformation in Power BI',
-      issuer: 'DataCamp',
-      issueDate: 'April 2023',
-      domain: 'Power BI',
-      description: 'Advanced techniques for transforming and reshaping data in Power BI using Power Query Editor.',
-      thumbnail: 'https://images.unsplash.com/photo-1587654780291-39c9404d746b?q=80&w=400&auto=format',
-      pdfPath: '/Certificates/Power bi/Data Transformation in Power BI.pdf'
-    },
-    {
-      id: '27',
-      title: 'Data Connections in Power BI',
-      issuer: 'DataCamp',
-      issueDate: 'May 2023',
-      domain: 'Power BI',
-      description: 'Course covering various data source connections and integration methods in Power BI.',
-      thumbnail: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=400&auto=format',
-      pdfPath: '/Certificates/Power bi/Data Connections in Power BI.pdf'
-    },
-    {
-      id: '28',
-      title: 'Data Visualization in Power BI',
-      issuer: 'DataCamp',
-      issueDate: 'June 2023',
-      domain: 'Power BI',
-      description: 'Comprehensive course on creating effective and interactive data visualizations in Power BI.',
-      thumbnail: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=400&auto=format',
-      pdfPath: '/Certificates/Power bi/Data Visualization in Power BI.pdf'
-    },
-    {
-      id: '29',
-      title: 'Introduction to DAX in Power BI',
-      issuer: 'DataCamp',
-      issueDate: 'July 2023',
-      domain: 'Power BI',
-      description: 'Foundation course on Data Analysis Expressions (DAX) for calculations and metrics in Power BI.',
-      thumbnail: 'https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?q=80&w=400&auto=format',
-      pdfPath: '/Certificates/Power bi/Introduction to DAX in Power BI.pdf'
-    },
-    {
-      id: '30',
-      title: 'Intermediate DAX in Power BI',
-      issuer: 'DataCamp',
-      issueDate: 'August 2023',
-      domain: 'Power BI',
-      description: 'Advanced DAX functions and techniques for complex calculations and business rules in Power BI.',
-      thumbnail: 'https://images.unsplash.com/photo-1587654780291-39c9404d746b?q=80&w=400&auto=format',
-      pdfPath: '/Certificates/Power bi/Intermediate DAX in Power BI.pdf'
-    },
-    {
-      id: '31',
-      title: 'DAX Functions in Power BI',
-      issuer: 'DataCamp',
-      issueDate: 'September 2023',
-      domain: 'Power BI',
-      description: 'Specialized course on utilizing built-in DAX functions for sophisticated data analysis in Power BI.',
-      thumbnail: 'https://images.unsplash.com/photo-1543286386-713bdd548da4?q=80&w=400&auto=format',
-      pdfPath: '/Certificates/Power bi/DAX Functions in Power BI.pdf'
-    },
-    {
-      id: '32',
-      title: 'Intermediate Data Modeling in Power BI',
-      issuer: 'DataCamp',
-      issueDate: 'October 2023',
-      domain: 'Power BI',
-      description: 'Advanced modeling techniques including many-to-many relationships and role-playing dimensions in Power BI.',
-      thumbnail: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=400&auto=format',
-      pdfPath: '/Certificates/Power bi/Intermediate Data Modeling in Power BI.pdf'
-    },
-    {
-      id: '33',
-      title: 'Reports in Power BI',
-      issuer: 'DataCamp',
-      issueDate: 'November 2023',
-      domain: 'Power BI',
-      description: 'Comprehensive training on building effective reports with filters, bookmarks, and navigation in Power BI.',
-      thumbnail: 'https://images.unsplash.com/photo-1587654780291-39c9404d746b?q=80&w=400&auto=format',
-      pdfPath: '/Certificates/Power bi/Reports in Power BI.pdf'
-    },
-    {
-      id: '34',
-      title: 'Report Design in Power BI',
-      issuer: 'DataCamp',
-      issueDate: 'December 2023',
-      domain: 'Power BI',
-      description: 'Course focusing on design principles, layouts, and accessibility for professional Power BI reports.',
-      thumbnail: 'https://images.unsplash.com/photo-1543286386-713bdd548da4?q=80&w=400&auto=format',
-      pdfPath: '/Certificates/Power bi/Report Design in Power BI.pdf'
-    },
-    {
-      id: '35',
-      title: 'Trend Analysis in Power BI',
-      issuer: 'DataCamp',
-      issueDate: 'January 2024',
-      domain: 'Power BI',
-      description: 'Specialized course on time series analysis, forecasting, and trend visualization in Power BI.',
-      thumbnail: 'https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?q=80&w=400&auto=format',
-      pdfPath: '/Certificates/Power bi/Trend Analysis in Power BI.pdf'
-    },
-    {
-      id: '36',
-      title: 'Exploratory Data Analysis in Power BI',
-      issuer: 'DataCamp',
-      issueDate: 'February 2024',
-      domain: 'Power BI',
-      description: 'Techniques for exploring datasets, identifying patterns, and extracting insights using Power BI tools.',
-      thumbnail: 'https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?q=80&w=400&auto=format',
-      pdfPath: '/Certificates/Power bi/Exploratory Data Analysis in Power BI.pdf'
-    },
-    {
-      id: '37',
-      title: 'Deploying and Maintaining Assets in Power BI',
-      issuer: 'DataCamp',
-      issueDate: 'March 2024',
-      domain: 'Power BI',
-      description: 'Best practices for deploying, sharing, and maintaining Power BI dashboards and reports in production environments.',
-      thumbnail: 'https://images.unsplash.com/photo-1543286386-713bdd548da4?q=80&w=400&auto=format',
-      pdfPath: '/Certificates/Power bi/Deploying and Maintaining Assets in Power BI.pdf'
-    }
-  ];
-
   // Filter certificates based on active filters
-  const filteredCertificates = activeFilters.length > 0 ? certificates.filter(cert => activeFilters.includes(cert.domain)) : certificates;
+  const filteredCertificates = activeFilters.length > 0 
+    ? certificates.filter(cert => activeFilters.includes(cert.domain)) 
+    : certificates;
   
-  return <div className="min-h-screen flex flex-col">
+  return (
+    <div className="min-h-screen flex flex-col">
       <Header />
       <main className="flex-grow py-20 px-4 md:px-6 light-section dark:bg-gradient-to-b dark:from-analyst-darkgrey dark:to-analyst-black">
         <div className="max-w-7xl mx-auto">
-          <Button variant="outline" className="mb-8 flex items-center gap-2 hover:bg-primary/10 hover:text-primary transition-all duration-300" onClick={handleGoBack}>
+          <Button 
+            variant="outline" 
+            className="mb-8 flex items-center gap-2 hover:bg-primary/10 hover:text-primary transition-all duration-300" 
+            onClick={handleGoBack}
+          >
             <ChevronLeft className="h-4 w-4" />
             Back
           </Button>
 
           <div className="text-center mb-16">
-            <motion.h2 initial={{
-            opacity: 0,
-            y: -20
-          }} animate={{
-            opacity: 1,
-            y: 0
-          }} transition={{
-            duration: 0.5
-          }} className="text-3xl font-bold mb-4 text-gradient-primary dark:text-white">
+            <motion.h2 
+              initial={{ opacity: 0, y: -20 }} 
+              animate={{ opacity: 1, y: 0 }} 
+              transition={{ duration: 0.5 }} 
+              className="text-3xl font-bold mb-4 text-gradient-primary dark:text-white"
+            >
               Professional Certificates
             </motion.h2>
-            <motion.p initial={{
-            opacity: 0
-          }} animate={{
-            opacity: 1
-          }} transition={{
-            duration: 0.5,
-            delay: 0.2
-          }} className="text-muted-foreground max-w-2xl mx-auto dark:text-white/80">
+            <motion.p 
+              initial={{ opacity: 0 }} 
+              animate={{ opacity: 1 }} 
+              transition={{ duration: 0.5, delay: 0.2 }} 
+              className="text-muted-foreground max-w-2xl mx-auto dark:text-white/80"
+            >
               A collection of my professional certifications demonstrating expertise in various domains of data analysis, engineering, and cloud technologies.
             </motion.p>
           </div>
@@ -469,6 +84,8 @@ const CertificatesPage = () => {
         </div>
       </main>
       <Footer />
-    </div>;
+    </div>
+  );
 };
+
 export default CertificatesPage;
