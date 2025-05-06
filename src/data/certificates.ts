@@ -11,7 +11,7 @@ export const certificates: Certificate[] = [
     domain: 'Power BI',
     description: 'Certification validating skills in creating and maintaining Power BI dashboards, performing data analysis, and transforming data into actionable insights.',
     image: '/certificates/images/power-bi-cert.jpg',
-    thumbnail: '/thumbnails/PowerBI/Microsoft-Power-BI.jpg',
+    thumbnail: '/thumbnails/Power Bi/365 Power BI.jpg',
     credentialUrl: 'https://www.credly.com/badges/microsoft-certified-power-bi-data-analyst'
   },
   {
@@ -21,7 +21,7 @@ export const certificates: Certificate[] = [
     issueDate: 'January 2023',
     domain: 'Power BI',
     description: 'Fundamental course covering Power BI basics, interface navigation, and creating simple dashboards.',
-    thumbnail: '/thumbnails/PowerBI/Introduction-to-Power-BI.jpg',
+    thumbnail: '/thumbnails/Power Bi/Introduction to Power BI-1.jpg',
     pdfPath: '/Certificates/Power bi/Introduction to Power BI.pdf'
   },
   {
@@ -31,7 +31,7 @@ export const certificates: Certificate[] = [
     issueDate: 'February 2023',
     domain: 'Power BI',
     description: 'Course on preparing, cleaning and transforming data before analysis in Power BI.',
-    thumbnail: '/thumbnails/PowerBI/Data-Preparation-in-Power-BI.jpg',
+    thumbnail: '/thumbnails/Power Bi/Data Preparation in Power BI-1.jpg',
     pdfPath: '/Certificates/Power bi/Data Preparation in Power BI.pdf'
   },
   {
@@ -41,7 +41,7 @@ export const certificates: Certificate[] = [
     issueDate: 'March 2023',
     domain: 'Power BI',
     description: 'In-depth training on creating effective data models and relationships in Power BI.',
-    thumbnail: '/thumbnails/PowerBI/Data-Modeling-in-Power-BI.jpg',
+    thumbnail: '/thumbnails/Power Bi/Data Modeling in Power BI-1.jpg',
     pdfPath: '/Certificates/Power bi/Data Modeling in Power BI.pdf'
   },
   {
@@ -51,7 +51,7 @@ export const certificates: Certificate[] = [
     issueDate: 'April 2023',
     domain: 'Power BI',
     description: 'Advanced techniques for transforming and reshaping data in Power BI using Power Query Editor.',
-    thumbnail: '/thumbnails/PowerBI/Data-Transformation-in-Power-BI.jpg',
+    thumbnail: '/thumbnails/Power Bi/Data Transformation in Power BI-1.jpg',
     pdfPath: '/Certificates/Power bi/Data Transformation in Power BI.pdf'
   },
   {
@@ -61,7 +61,7 @@ export const certificates: Certificate[] = [
     issueDate: 'May 2023',
     domain: 'Power BI',
     description: 'Course covering various data source connections and integration methods in Power BI.',
-    thumbnail: '/thumbnails/PowerBI/Data-Connections-in-Power-BI.jpg',
+    thumbnail: '/thumbnails/Power Bi/Data Connections in Power BI-1.jpg',
     pdfPath: '/Certificates/Power bi/Data Connections in Power BI.pdf'
   },
   {
@@ -71,7 +71,7 @@ export const certificates: Certificate[] = [
     issueDate: 'June 2023',
     domain: 'Power BI',
     description: 'Comprehensive course on creating effective and interactive data visualizations in Power BI.',
-    thumbnail: '/thumbnails/PowerBI/Data-Visualization-in-Power-BI.jpg',
+    thumbnail: '/thumbnails/Power Bi/Data Visualization in Power BI-1.jpg',
     pdfPath: '/Certificates/Power bi/Data Visualization in Power BI.pdf'
   },
   {
@@ -81,7 +81,7 @@ export const certificates: Certificate[] = [
     issueDate: 'July 2023',
     domain: 'Power BI',
     description: 'Foundation course on Data Analysis Expressions (DAX) for calculations and metrics in Power BI.',
-    thumbnail: '/thumbnails/PowerBI/Introduction-to-DAX-in-Power-BI.jpg',
+    thumbnail: '/thumbnails/Power Bi/Introduction to DAX in Power BI-1.jpg',
     pdfPath: '/Certificates/Power bi/Introduction to DAX in Power BI.pdf'
   },
   {
@@ -91,7 +91,7 @@ export const certificates: Certificate[] = [
     issueDate: 'August 2023',
     domain: 'Power BI',
     description: 'Advanced DAX functions and techniques for complex calculations and business rules in Power BI.',
-    thumbnail: '/thumbnails/PowerBI/Intermediate-DAX-in-Power-BI.jpg',
+    thumbnail: '/thumbnails/Power Bi/Intermediate DAX in Power BI-1.jpg',
     pdfPath: '/Certificates/Power bi/Intermediate DAX in Power BI.pdf'
   },
   {
@@ -101,7 +101,7 @@ export const certificates: Certificate[] = [
     issueDate: 'September 2023',
     domain: 'Power BI',
     description: 'Specialized course on utilizing built-in DAX functions for sophisticated data analysis in Power BI.',
-    thumbnail: '/thumbnails/PowerBI/DAX-Functions-in-Power-BI.jpg',
+    thumbnail: '/thumbnails/Power Bi/DAX Functions in Power BI-1.jpg',
     pdfPath: '/Certificates/Power bi/DAX Functions in Power BI.pdf'
   },
   {
@@ -111,7 +111,7 @@ export const certificates: Certificate[] = [
     issueDate: 'October 2023',
     domain: 'Power BI',
     description: 'Advanced modeling techniques including many-to-many relationships and role-playing dimensions in Power BI.',
-    thumbnail: '/thumbnails/PowerBI/Intermediate-Data-Modeling-in-Power-BI.jpg',
+    thumbnail: '/thumbnails/Power Bi/Intermediate Data Modeling in Power BI-1.jpg',
     pdfPath: '/Certificates/Power bi/Intermediate Data Modeling in Power BI.pdf'
   },
   {
@@ -121,7 +121,7 @@ export const certificates: Certificate[] = [
     issueDate: 'November 2023',
     domain: 'Power BI',
     description: 'Comprehensive training on building effective reports with filters, bookmarks, and navigation in Power BI.',
-    thumbnail: '/thumbnails/PowerBI/Reports-in-Power-BI.jpg',
+    thumbnail: '/thumbnails/Power Bi/Reports in Power BI-1.jpg',
     pdfPath: '/Certificates/Power bi/Reports in Power BI.pdf'
   },
   {
@@ -131,7 +131,7 @@ export const certificates: Certificate[] = [
     issueDate: 'December 2023',
     domain: 'Power BI',
     description: 'Course focusing on design principles, layouts, and accessibility for professional Power BI reports.',
-    thumbnail: '/thumbnails/PowerBI/Report-Design-in-Power-BI.jpg',
+    thumbnail: '/thumbnails/Power Bi/Report Design in Power BI-1.jpg',
     pdfPath: '/Certificates/Power bi/Report Design in Power BI.pdf'
   },
   {
@@ -141,7 +141,7 @@ export const certificates: Certificate[] = [
     issueDate: 'January 2024',
     domain: 'Power BI',
     description: 'Specialized course on time series analysis, forecasting, and trend visualization in Power BI.',
-    thumbnail: '/thumbnails/PowerBI/Trend-Analysis-in-Power-BI.jpg',
+    thumbnail: '/thumbnails/Power Bi/Trend Analysis in Power BI-1.jpg',
     pdfPath: '/Certificates/Power bi/Trend Analysis in Power BI.pdf'
   },
   {
@@ -151,7 +151,7 @@ export const certificates: Certificate[] = [
     issueDate: 'February 2024',
     domain: 'Power BI',
     description: 'Techniques for exploring datasets, identifying patterns, and extracting insights using Power BI tools.',
-    thumbnail: '/thumbnails/PowerBI/Exploratory-Data-Analysis-in-Power-BI.jpg',
+    thumbnail: '/thumbnails/Power Bi/Exploratory Data Analysis in Power BI-1.jpg',
     pdfPath: '/Certificates/Power bi/Exploratory Data Analysis in Power BI.pdf'
   },
   {
@@ -161,7 +161,7 @@ export const certificates: Certificate[] = [
     issueDate: 'March 2024',
     domain: 'Power BI',
     description: 'Best practices for deploying, sharing, and maintaining Power BI dashboards and reports in production environments.',
-    thumbnail: '/thumbnails/PowerBI/Deploying-and-Maintaining-Assets-in-Power-BI.jpg',
+    thumbnail: '/thumbnails/Power Bi/Deploying and Maintaining Assets in Power BI-1.jpg',
     pdfPath: '/Certificates/Power bi/Deploying and Maintaining Assets in Power BI.pdf'
   },
   
