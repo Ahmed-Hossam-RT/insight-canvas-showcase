@@ -5,7 +5,7 @@ export const certificates: Certificate[] = [
   // Power BI Certificates
   {
     id: '1',
-    title: 'Microsoft Certified: Power BI Data Analyst Associate',
+    title: 'Microsoft Power BI Data Analyst Associate',
     issuer: 'Microsoft',
     issueDate: 'June 2023',
     domain: 'Power BI',
@@ -286,8 +286,20 @@ export const certificates: Certificate[] = [
     domain: 'Data Engineer',
     description: 'Specialization in designing, building, and maintaining data processing systems with a focus on reliability, efficiency, and security.',
     image: '/certificates/images/gcp-data-engineering.jpg',
-    thumbnail: 'https://images.unsplash.com/photo-1461749280684-dccba630e2f6?q=80&w=400&auto=format',
+    thumbnail: '/thumbnails/GOOGLE CERT.jpg',
     credentialUrl: 'https://www.coursera.org/account/accomplishments/specialization/data-engineering-gcp'
+  },
+  
+  // Google Data Analyst Certificate
+  {
+    id: '41',
+    title: 'Google Data Analytics Professional Certificate',
+    issuer: 'Google',
+    issueDate: 'May 2023',
+    domain: 'Data Analyst',
+    description: 'Comprehensive Google certification covering data analysis, preparation, processing, visualization, and R programming.',
+    thumbnail: '/thumbnails/GOOGLE CERT.jpg',
+    pdfPath: '/Certificates/GOOGLE CERT.pdf'
   },
   
   // Cloud Certificates
@@ -337,7 +349,7 @@ export const certificates: Certificate[] = [
     issueDate: 'July 2022',
     domain: 'Python',
     description: 'Complete career track covering Python fundamentals, data manipulation, and analysis for professional data analyst roles.',
-    thumbnail: 'https://images.unsplash.com/photo-1461749280684-dccba630e2f6?q=80&w=400&auto=format',
+    thumbnail: '/thumbnails/Python/Data analyst in python.jpg',
     pdfPath: '/Certificates/python/Data analyst in python.pdf'
   },
   {
@@ -347,7 +359,7 @@ export const certificates: Certificate[] = [
     issueDate: 'June 2022',
     domain: 'Python',
     description: 'Fundamental course covering Python syntax, data types, functions, and basic programming concepts.',
-    thumbnail: 'https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=400&auto=format',
+    thumbnail: '/thumbnails/Python/introduction to python.jpg',
     pdfPath: '/Certificates/python/introduction to python.pdf'
   },
   {
@@ -357,7 +369,7 @@ export const certificates: Certificate[] = [
     issueDate: 'August 2022',
     domain: 'Python',
     description: 'Comprehensive course on using pandas library for data manipulation, cleaning, and preparation in Python.',
-    thumbnail: 'https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?q=80&w=400&auto=format',
+    thumbnail: '/thumbnails/Python/Data Manipulation with pandas.jpg',
     pdfPath: '/Certificates/python/Data Manipulation with pandas.pdf'
   },
   {
@@ -367,7 +379,7 @@ export const certificates: Certificate[] = [
     issueDate: 'September 2022',
     domain: 'Python',
     description: 'Advanced techniques for combining and merging datasets using pandas, including various join operations.',
-    thumbnail: 'https://images.unsplash.com/photo-1461749280684-dccba630e2f6?q=80&w=400&auto=format',
+    thumbnail: '/thumbnails/Python/Joining Data with pandas.jpg',
     pdfPath: '/Certificates/python/Joining Data with pandas.pdf'
   },
   {
@@ -377,7 +389,7 @@ export const certificates: Certificate[] = [
     issueDate: 'October 2022',
     domain: 'Python',
     description: 'Foundation course on creating effective data visualizations in Python using the Matplotlib library.',
-    thumbnail: 'https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=400&auto=format',
+    thumbnail: '/thumbnails/Python/Introduction to Data Visualization with.jpg',
     pdfPath: '/Certificates/python/Introduction to Data Visualization with.pdf'
   },
   {
@@ -387,7 +399,7 @@ export const certificates: Certificate[] = [
     issueDate: 'November 2022',
     domain: 'Python',
     description: 'Techniques for exploring datasets, detecting patterns, and extracting insights using Python statistical tools.',
-    thumbnail: 'https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?q=80&w=400&auto=format',
+    thumbnail: '/thumbnails/Python/Exploratory Data Analysis in Python.jpg',
     pdfPath: '/Certificates/python/Exploratory Data Analysis in Python.pdf'
   },
   {
@@ -397,7 +409,7 @@ export const certificates: Certificate[] = [
     issueDate: 'December 2022',
     domain: 'Python',
     description: 'Course covering fundamental statistical concepts and their implementation using Python libraries.',
-    thumbnail: 'https://images.unsplash.com/photo-1461749280684-dccba630e2f6?q=80&w=400&auto=format',
+    thumbnail: '/thumbnails/Python/Introduction to Statistics in Python.jpg',
     pdfPath: '/Certificates/python/Introduction to Statistics in Python.pdf'
   },
   {
@@ -407,7 +419,7 @@ export const certificates: Certificate[] = [
     issueDate: 'January 2023',
     domain: 'Python',
     description: 'Advanced course on statistical hypothesis testing methods and implementations in Python.',
-    thumbnail: 'https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=400&auto=format',
+    thumbnail: '/thumbnails/Python/Hypothesis Testing in Python.jpg',
     pdfPath: '/Certificates/python/Hypothesis Testing in Python.pdf'
   },
   {
@@ -417,7 +429,7 @@ export const certificates: Certificate[] = [
     issueDate: 'February 2023',
     domain: 'Python',
     description: 'Specialized course on sampling techniques and methodologies for data analysis in Python.',
-    thumbnail: 'https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?q=80&w=400&auto=format',
+    thumbnail: '/thumbnails/Python/Sampling in Python.jpg',
     pdfPath: '/Certificates/python/Sampling in Python.pdf'
   }
 ];
