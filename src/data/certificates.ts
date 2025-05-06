@@ -1,4 +1,3 @@
-
 import { Certificate } from '@/types/certificate';
 
 export const certificates: Certificate[] = [
@@ -167,23 +166,13 @@ export const certificates: Certificate[] = [
   
   // SQL Certificates
   {
-    id: '3',
-    title: 'Advanced SQL for Data Analysis',
-    issuer: 'DataCamp',
-    issueDate: 'January 2023',
-    domain: 'SQL',
-    description: 'Advanced course covering complex SQL queries, optimization techniques, and data manipulation for analytical purposes.',
-    thumbnail: '/thumbnails/SQL/Advanced-SQL-for-Data-Analysis.jpg',
-    pdfPath: '/Certificates/PDF/Data manipulation in SQL.pdf'
-  },
-  {
     id: '7',
     title: 'Data Manipulation in SQL',
     issuer: 'DataCamp',
     issueDate: 'May 2022',
     domain: 'SQL',
     description: 'Comprehensive course on SQL data manipulation techniques, including joins, subqueries, and advanced filtering.',
-    thumbnail: '/thumbnails/SQL/Data manipulation in SQL.jpg',
+    thumbnail: '/lovable-uploads/b5e4037b-3715-40a3-8451-969d257c17a4.png',
     pdfPath: '/Certificates/PDF/Data manipulation in SQL.pdf'
   },
   {
@@ -193,7 +182,7 @@ export const certificates: Certificate[] = [
     issueDate: 'April 2022',
     domain: 'SQL',
     description: 'Course focused on using SQL for data analysis and making informed business decisions based on database insights.',
-    thumbnail: '/thumbnails/SQL/Data-Driven Decision Making in SQL.pdf.jpg',
+    thumbnail: '/lovable-uploads/ba8efcbc-62f2-4e26-88e0-e36995c41a8c.png',
     pdfPath: '/Certificates/PDF/Data-Driven Decision Making in SQL.pdf'
   },
   {
