@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Calendar, Award, ExternalLink, FileText } from 'lucide-react';
+import { Award, ExternalLink, FileText } from 'lucide-react';
 import { Certificate } from '@/types/certificate';
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -65,12 +65,9 @@ const CertificateGrid: React.FC<CertificateGridProps> = ({ certificates, onCerti
             <CardContent className="p-5 flex flex-col h-[calc(100%-12rem)]">
               <h3 className="text-lg font-semibold mb-2 text-foreground dark:text-white">{certificate.title}</h3>
               <p className="text-sm text-muted-foreground dark:text-white/70 mb-4">{certificate.description}</p>
-              <div className="mt-auto flex justify-between items-center">
+              <div className="mt-auto">
                 <span className="text-sm font-medium text-primary dark:text-analyst-orange">{certificate.issuer}</span>
-                <div className="flex items-center gap-1 text-xs text-muted-foreground dark:text-white/60">
-                  <Calendar className="h-3 w-3" />
-                  <span>{certificate.issueDate}</span>
-                </div>
+                {/* Removed date display */}
               </div>
               {(certificate.credentialUrl || certificate.pdfPath) && (
                 <div className="mt-4 flex space-x-2">

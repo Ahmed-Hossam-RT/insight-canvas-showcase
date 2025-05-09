@@ -4,9 +4,9 @@ export const certificates: Certificate[] = [
   // Power BI Certificates
   {
     id: '1',
-    title: 'Microsoft Power BI Data Analyst Associate',
-    issuer: 'Microsoft',
-    issueDate: 'June 2023',
+    title: 'Power BI Analyst',
+    issuer: '365 Data Science',
+    issueDate: 'June 2023', // We'll keep the date in the data but not display it
     domain: 'Power BI',
     description: 'Certification validating skills in creating and maintaining Power BI dashboards, performing data analysis, and transforming data into actionable insights.',
     image: '/certificates/images/power-bi-cert.jpg',
