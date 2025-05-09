@@ -49,7 +49,8 @@ const Skills: React.FC = () => {
             { name: "Data Analysis", level: 95 },
             { name: "SQL", level: 90 },
             { name: "Python", level: 85 },
-            { name: "R Programming", level: 80 },
+            { name: "Power Bi", level: 80 },
+            { name: "Excel", level: 75 },
           ].map((skill, index) => (
             <div key={index} className="space-y-1.5">
               <div className="flex justify-between">
