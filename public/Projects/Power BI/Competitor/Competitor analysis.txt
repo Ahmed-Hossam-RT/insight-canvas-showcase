@@ -1,0 +1,30 @@
+
+Revenue & Performance Metrics
+Achieved 57.79% growth in key product categories, highlighting successful sales strategies.
+
+Identified 94.7K high-value transactions, emphasizing customer purchasing trends.
+
+sintec market share of 19.6% 
+generates most of revenue in usa and japan 
+revenue grows from year to year with growth rate of 21% from 2020 to 2021
+
+Key Revenue Drivers
+Top Products:
+
+Upsumu UC-S4 and Mushuru UA+80 drove the highest revenue increases.
+
+Choice UA+10 contributed significantly to incremental growth ($13.37 per unit).
+
+Manufacturer Impact: Revenue surged when Assistant 2 was the supplier, suggesting strategic partnerships.
+
+Category & Segment Analysis
+Category X and Segment X dominated sales, offering opportunities for targeted marketing.
+
+Visualized product-level performance to optimize inventory and promotions.
+
+
+
+Interactive Analytics
+Dynamic dashboards filtered by Date, Geography, Manufacturer, and Product Details.
+
+Drill-through reports enabled granular analysis of country-level sales (e.g., 6 countries contributing 40% of revenue).
