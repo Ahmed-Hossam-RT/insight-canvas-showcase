@@ -1,10 +1,11 @@
 
-import React from 'react';
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Award, ExternalLink, FileText } from 'lucide-react';
 import { Certificate } from '@/types/certificate';
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import { toast } from "@/hooks/use-toast";
 
 interface CertificateGridProps {
   certificates: Certificate[];
@@ -12,6 +13,32 @@ interface CertificateGridProps {
 }
 
 const CertificateGrid: React.FC<CertificateGridProps> = ({ certificates, onCertificateClick }) => {
+  const [loadedImages, setLoadedImages] = useState<Record<string, boolean>>({});
+
+  const handleImageError = (certificateId: string, imageType: string) => {
+    console.error(`Failed to load ${imageType} for certificate ID ${certificateId}`);
+    setLoadedImages(prev => ({
+      ...prev,
+      [`${certificateId}-${imageType}`]: false
+    }));
+    
+    // Only show toast for thumbnail failures since they're the main visible images
+    if (imageType === 'thumbnail') {
+      toast({
+        title: "Image failed to load",
+        description: "Using fallback display instead",
+        variant: "destructive",
+      });
+    }
+  };
+
+  const handleImageLoad = (certificateId: string, imageType: string) => {
+    setLoadedImages(prev => ({
+      ...prev,
+      [`${certificateId}-${imageType}`]: true
+    }));
+  };
+
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
       {certificates.map((certificate, index) => (
@@ -32,20 +59,16 @@ const CertificateGrid: React.FC<CertificateGridProps> = ({ certificates, onCerti
                     src={certificate.thumbnail} 
                     alt={certificate.title}
                     className="object-cover w-full h-full"
-                    onError={(e) => {
-                      const target = e.target as HTMLImageElement;
-                      target.src = "/placeholder.svg";
-                    }}
+                    onError={() => handleImageError(certificate.id, 'thumbnail')}
+                    onLoad={() => handleImageLoad(certificate.id, 'thumbnail')}
                   />
                 ) : certificate.image ? (
                   <img 
                     src={certificate.image} 
                     alt={certificate.title}
                     className="object-cover w-full h-full"
-                    onError={(e) => {
-                      const target = e.target as HTMLImageElement;
-                      target.src = "/placeholder.svg";
-                    }}
+                    onError={() => handleImageError(certificate.id, 'image')}
+                    onLoad={() => handleImageLoad(certificate.id, 'image')}
                   />
                 ) : certificate.pdfPath ? (
                   <div className="flex items-center justify-center w-full h-full bg-gray-50 dark:bg-gray-800">
@@ -67,7 +90,6 @@ const CertificateGrid: React.FC<CertificateGridProps> = ({ certificates, onCerti
               <p className="text-sm text-muted-foreground dark:text-white/70 mb-4">{certificate.description}</p>
               <div className="mt-auto">
                 <span className="text-sm font-medium text-primary dark:text-analyst-orange">{certificate.issuer}</span>
-                {/* Removed date display */}
               </div>
               {(certificate.credentialUrl || certificate.pdfPath) && (
                 <div className="mt-4 flex space-x-2">

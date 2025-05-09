@@ -276,19 +276,6 @@ export const certificates: Certificate[] = [
     pdfPath: '/Certificates/PDF/Reporting in SQL.pdf'
   },
   
-  // Data Engineer Certificates
-  {
-    id: '2',
-    title: 'Data Engineering on Google Cloud Platform',
-    issuer: 'Google Cloud',
-    issueDate: 'March 2023',
-    domain: 'Data Engineer',
-    description: 'Specialization in designing, building, and maintaining data processing systems with a focus on reliability, efficiency, and security.',
-    image: '/certificates/images/gcp-data-engineering.jpg',
-    thumbnail: '/thumbnails/GOOGLE CERT.jpg',
-    credentialUrl: 'https://www.coursera.org/account/accomplishments/specialization/data-engineering-gcp'
-  },
-  
   // Google Data Analyst Certificate
   {
     id: '41',
@@ -299,45 +286,6 @@ export const certificates: Certificate[] = [
     description: 'Comprehensive Google certification covering data analysis, preparation, processing, visualization, and R programming.',
     thumbnail: '/thumbnails/GOOGLE CERT.jpg',
     pdfPath: '/Certificates/GOOGLE CERT.pdf'
-  },
-  
-  // Cloud Certificates
-  {
-    id: '4',
-    title: 'AWS Certified Data Analytics - Specialty',
-    issuer: 'Amazon Web Services',
-    issueDate: 'November 2022',
-    domain: 'Cloud',
-    description: 'Validates technical expertise in designing and maintaining AWS data analytics solutions.',
-    image: '/certificates/images/aws-analytics.jpg',
-    thumbnail: 'https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?q=80&w=400&auto=format',
-    credentialUrl: 'https://www.credly.com/badges/aws-certified-data-analytics-specialty'
-  },
-  
-  // Data Analyst Certificates
-  {
-    id: '5',
-    title: 'Data Analyst with Python',
-    issuer: 'DataCamp',
-    issueDate: 'October 2022',
-    domain: 'Data Analyst',
-    description: 'Comprehensive track covering Python libraries for data analysis including Pandas, NumPy, and Matplotlib.',
-    image: '/certificates/images/python-analyst.jpg',
-    thumbnail: 'https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=400&auto=format',
-    credentialUrl: 'https://www.datacamp.com/certificate/data-analyst-with-python'
-  },
-  
-  // Machine Learning Certificates
-  {
-    id: '6',
-    title: 'Machine Learning Fundamentals',
-    issuer: 'Coursera',
-    issueDate: 'August 2022',
-    domain: 'Machine Learning',
-    description: 'Introduction to machine learning algorithms, techniques, and practical applications in data science.',
-    image: '/certificates/images/ml-fundamentals.jpg',
-    thumbnail: 'https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?q=80&w=400&auto=format',
-    credentialUrl: 'https://www.coursera.org/account/accomplishments/verify/ML-fundamentals'
   },
   
   // Python Certificates
