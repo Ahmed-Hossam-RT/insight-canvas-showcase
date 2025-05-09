@@ -39,6 +39,22 @@ const CertificateGrid: React.FC<CertificateGridProps> = ({ certificates, onCerti
     }));
   };
 
+  // Function to get placeholder image based on domain
+  const getPlaceholderImage = (domain: string) => {
+    switch(domain) {
+      case 'Power BI':
+        return 'https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?auto=format&fit=crop&w=600&h=400';
+      case 'SQL':
+        return 'https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=600&h=400';
+      case 'Python':
+        return 'https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=600&h=400';
+      case 'Data Analyst':
+        return 'https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=600&h=400';
+      default:
+        return 'https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?auto=format&fit=crop&w=600&h=400';
+    }
+  };
+
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
       {certificates.map((certificate, index) => (
@@ -53,30 +69,48 @@ const CertificateGrid: React.FC<CertificateGridProps> = ({ certificates, onCerti
         >
           <Card className="overflow-hidden h-full light-card dark:border-analyst-orange/20 dark:bg-gradient-to-br dark:from-analyst-darkgrey dark:to-analyst-black">
             <div className="relative h-48 bg-gray-100 dark:bg-gray-700">
+              {/* Certificate Image with Improved Error Handling */}
               <div className="absolute inset-0 flex items-center justify-center">
                 {certificate.thumbnail ? (
                   <img 
                     src={certificate.thumbnail} 
                     alt={certificate.title}
-                    className="object-cover w-full h-full"
+                    className={`object-cover w-full h-full ${loadedImages[`${certificate.id}-thumbnail`] === false ? 'hidden' : ''}`}
                     onError={() => handleImageError(certificate.id, 'thumbnail')}
                     onLoad={() => handleImageLoad(certificate.id, 'thumbnail')}
+                    loading="lazy"
                   />
-                ) : certificate.image ? (
+                ) : null}
+                
+                {/* Show image fallback if thumbnail fails */}
+                {(!certificate.thumbnail || loadedImages[`${certificate.id}-thumbnail`] === false) && certificate.image && (
                   <img 
                     src={certificate.image} 
                     alt={certificate.title}
-                    className="object-cover w-full h-full"
+                    className={`object-cover w-full h-full ${loadedImages[`${certificate.id}-image`] === false ? 'hidden' : ''}`}
                     onError={() => handleImageError(certificate.id, 'image')}
                     onLoad={() => handleImageLoad(certificate.id, 'image')}
+                    loading="lazy"
                   />
-                ) : certificate.pdfPath ? (
-                  <div className="flex items-center justify-center w-full h-full bg-gray-50 dark:bg-gray-800">
-                    <FileText className="h-16 w-16 text-primary/30 dark:text-analyst-orange/30" />
-                  </div>
-                ) : (
-                  <div className="flex items-center justify-center w-full h-full">
-                    <Award className="h-16 w-16 text-primary/30 dark:text-analyst-orange/30" />
+                )}
+                
+                {/* Domain-based placeholder if both thumbnail and image fail */}
+                {(!certificate.thumbnail || loadedImages[`${certificate.id}-thumbnail`] === false) && 
+                 (!certificate.image || loadedImages[`${certificate.id}-image`] === false) && (
+                  <div className="flex items-center justify-center w-full h-full relative overflow-hidden">
+                    <img 
+                      src={getPlaceholderImage(certificate.domain)}
+                      alt="Domain placeholder"
+                      className="object-cover w-full h-full opacity-30"
+                    />
+                    <div className="absolute inset-0 flex flex-col items-center justify-center">
+                      {certificate.pdfPath ? (
+                        <FileText className="h-16 w-16 text-primary dark:text-analyst-orange" />
+                      ) : (
+                        <Award className="h-16 w-16 text-primary dark:text-analyst-orange" />
+                      )}
+                      <span className="text-sm font-medium mt-2 text-center px-4">{certificate.domain} Certificate</span>
+                    </div>
                   </div>
                 )}
               </div>
