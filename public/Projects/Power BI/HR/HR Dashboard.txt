@@ -1,0 +1,30 @@
+Project Overview:
+Developed a comprehensive HR analytics dashboard for Atlas Labs to monitor employee metrics, track performance, and analyze attrition trends. The dashboard provides actionable insights to optimize workforce management and improve employee satisfaction.
+
+Key Insights and Features:
+Employee Overview:
+
+Tracked 1,470 total employees, with 1,233 active and 237 inactive employees, highlighting a 16.1% attrition rate.
+
+Visualized hiring trends across departments like Technology, Sales, and Human Resources to identify growth areas.
+
+Performance Tracker:
+
+Monitored employee satisfaction levels (1–5 scale) 
+
+Analyzed yearly trends for Job Satisfaction, Environment Satisfaction, and Relationship Satisfaction (2019–2022).
+
+Included Manager and Self-Ratings to evaluate alignment and growth opportunities.
+
+Attrition Analysis:
+
+Identified attrition drivers by correlating satisfaction scores with departmental turnover.
+
+Highlighted inactive employees to prioritize retention strategies.
+
+Interactive Visualizations:
+
+Built dynamic charts and filters (e.g., Department, Job Role, Year) for exploratory data analysis.
+
+Integrated cross-reporting tools to link attrition data with performance metrics.
+
