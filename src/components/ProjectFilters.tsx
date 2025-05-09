@@ -4,15 +4,11 @@ import { Button } from "@/components/ui/button";
 import { Filter } from 'lucide-react';
 
 const categories = [
-  "Marketing", 
-  "Analytics", 
-  "Research", 
-  "Customer Analysis", 
-  "Sales", 
-  "Finance", 
-  "Digital", 
-  "Operations", 
-  "Logistics"
+  "Power BI", 
+  "HR Analytics", 
+  "Market Analysis", 
+  "Employee Data", 
+  "Competitive Intelligence"
 ];
 
 interface ProjectFiltersProps {

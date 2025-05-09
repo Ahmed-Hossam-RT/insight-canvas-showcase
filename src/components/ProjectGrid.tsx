@@ -1,106 +1,46 @@
 
-import React from 'react';
+import React, { useState } from 'react';
 import { Card, CardContent } from "@/components/ui/card";
 import { motion } from "framer-motion";
 import { FileImage, FileText, Database } from 'lucide-react';
 import { ProjectType } from '@/types/project';
+import { toast } from '@/hooks/use-toast';
 
 const projectsData: ProjectType[] = [
   {
     id: "1",
-    title: "Marketing Analytics Dashboard",
-    description: "Interactive Power BI dashboard showing key marketing metrics and ROI analysis",
-    type: "data",
-    thumbnail: "/placeholder.svg",
-    date: "2024-04-20",
-    category: ["Power BI", "Marketing", "Analytics"],
-    content: "This Power BI dashboard provides a comprehensive overview of our marketing campaigns, including ROI metrics, conversion rates, and customer acquisition costs.",
-    insights: [
-      "Social media campaigns outperformed email by 37% in Q2",
-      "Customer acquisition cost decreased by 24% after website optimization",
-      "Mobile traffic converts 18% better on the new landing page design"
-    ],
-    dashboardUrl: "https://app.powerbi.com/view?r=example-marketing"
-  },
-  {
-    id: "2",
-    title: "Customer Segmentation Analysis",
-    description: "Detailed Power BI report with customer segments based on behavior patterns",
+    title: "HR Analytics Dashboard",
+    description: "Comprehensive HR dashboard tracking employee metrics, performance and attrition trends",
     type: "data",
     thumbnail: "/placeholder.svg",
     date: "2024-04-15",
-    category: ["Power BI", "Customer Analysis", "Research"],
-    content: "This Power BI report segments our customer base into distinct groups based on purchasing behavior, demographics, and engagement metrics.",
+    category: ["Power BI", "HR Analytics", "Employee Data"],
+    content: "Developed a comprehensive HR analytics dashboard for Atlas Labs to monitor employee metrics, track performance, and analyze attrition trends. The dashboard provides actionable insights to optimize workforce management and improve employee satisfaction.",
     insights: [
-      "High-value customers make up only 6% of the base but generate 43% of revenue",
-      "Loyalty program members spend 2.3x more than non-members",
-      "First-time purchase rate increased after UX improvements"
+      "Tracked 1,470 total employees, with 1,233 active and 237 inactive employees, highlighting a 16.1% attrition rate",
+      "Visualized hiring trends across departments like Technology, Sales, and Human Resources to identify growth areas",
+      "Monitored employee satisfaction levels (1–5 scale) with yearly trends from 2019–2022",
+      "Identified attrition drivers by correlating satisfaction scores with departmental turnover"
     ],
-    dashboardUrl: "https://app.powerbi.com/view?r=example-customer"
+    dashboardUrl: "https://medmansedu-my.sharepoint.com/:u:/g/personal/hossamrefaat_std_mans_edu_eg/EbMSk8MIRy9Bo-yPb1n_-BIBf-PTI2zTwyo-tb24x3k-Lg?e=36N31V"
   },
   {
-    id: "3",
-    title: "Sales Performance Visualization",
-    description: "Regional sales performance Power BI dashboard with interactive filters",
+    id: "2",
+    title: "Competitor Analysis Dashboard",
+    description: "Strategic analysis of market positions, performance metrics and revenue drivers",
     type: "data",
     thumbnail: "/placeholder.svg",
     date: "2024-04-10",
-    category: ["Power BI", "Sales", "Visualization"],
-    content: "This interactive Power BI dashboard shows regional sales performance with year-over-year comparisons and trend analysis.",
+    category: ["Power BI", "Market Analysis", "Competitive Intelligence"],
+    content: "Created a comprehensive competitor analysis dashboard tracking revenue performance, market share, and product performance across different regions and time periods. The dashboard enables strategic decision-making based on competitive positioning and market trends.",
     insights: [
-      "Western region showed 27% YoY growth, outperforming all other regions",
-      "Product line A experienced consistent growth across all markets",
-      "Seasonal patterns indicate optimal timing for new product launches"
+      "Achieved 57.79% growth in key product categories, highlighting successful sales strategies",
+      "Identified 94.7K high-value transactions, emphasizing customer purchasing trends",
+      "Sintec market share of 19.6%, generating most revenue in USA and Japan",
+      "Revenue growth rate of 21% from 2020 to 2021",
+      "Top Products: Upsumu UC-S4 and Mushuru UA+80 drove the highest revenue increases"
     ],
-    dashboardUrl: "https://app.powerbi.com/view?r=example-sales"
-  },
-  {
-    id: "4",
-    title: "Financial Forecast Dashboard",
-    description: "Power BI models for quarterly financial planning and forecasting",
-    type: "data",
-    thumbnail: "/placeholder.svg",
-    date: "2024-04-05",
-    category: ["Power BI", "Finance", "Analytics"],
-    content: "This Power BI forecasting model helps predict revenue streams and expense patterns for improved financial planning.",
-    insights: [
-      "The model predicted Q1 revenue within 3.5% accuracy",
-      "Seasonal factors account for 23% of variance in our sales cycles",
-      "Cost optimization opportunities identified in operations and marketing"
-    ],
-    dashboardUrl: "https://app.powerbi.com/view?r=example-finance"
-  },
-  {
-    id: "5",
-    title: "Website Analytics Dashboard",
-    description: "Comprehensive Power BI analysis of website traffic and conversion metrics",
-    type: "data",
-    thumbnail: "/placeholder.svg",
-    date: "2024-03-28",
-    category: ["Power BI", "Digital", "Analytics"],
-    content: "This Power BI report analyzes user behavior across our digital properties, identifying optimization opportunities and tracking goal completion.",
-    insights: [
-      "Mobile conversion rate improved 42% after checkout optimization",
-      "Average session duration increased by 1:45 minutes",
-      "Top entry pages driving 68% of new visitor traffic"
-    ],
-    dashboardUrl: "https://app.powerbi.com/view?r=example-website"
-  },
-  {
-    id: "6",
-    title: "Supply Chain Optimization",
-    description: "Power BI dashboard of supply chain efficiency metrics and KPIs",
-    type: "data",
-    thumbnail: "/placeholder.svg",
-    date: "2024-03-20",
-    category: ["Power BI", "Operations", "Logistics"],
-    content: "This Power BI visualization tracks key metrics in our supply chain, from procurement to delivery, highlighting bottlenecks and optimization opportunities.",
-    insights: [
-      "Reduced lead times by 34% after process improvements",
-      "Inventory turns increased from 6 to 8.5 annually",
-      "Logistics costs as percentage of revenue decreased by 2.7%"
-    ],
-    dashboardUrl: "https://app.powerbi.com/view?r=example-supply"
+    dashboardUrl: "https://medmansedu-my.sharepoint.com/:u:/g/personal/hossamrefaat_std_mans_edu_eg/ERafQzm_zGlHuPIx6KLZANcBfrk1y0UMONUB397xn1_hsg?e=LDdjGh"
   }
 ];
 
@@ -123,12 +63,22 @@ interface ProjectGridProps {
 }
 
 const ProjectGrid: React.FC<ProjectGridProps> = ({ activeFilters, onProjectClick }) => {
+  const [imageErrors, setImageErrors] = useState<Record<string, boolean>>({});
   
   const filteredProjects = activeFilters.length 
     ? projectsData.filter(project => 
         project.category.some(category => activeFilters.includes(category))
       )
     : projectsData;
+
+  const handleImageError = (projectId: string) => {
+    setImageErrors(prev => ({ ...prev, [projectId]: true }));
+    toast({
+      title: "Image loading issue",
+      description: "Could not load project thumbnail. Using placeholder instead.",
+      variant: "destructive",
+    });
+  };
 
   const cardVariants = {
     hidden: { opacity: 0, y: 20 },
@@ -143,7 +93,7 @@ const ProjectGrid: React.FC<ProjectGridProps> = ({ activeFilters, onProjectClick
   };
 
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-8">
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8">
       {filteredProjects.map((project, index) => (
         <motion.div
           key={project.id}
@@ -158,9 +108,10 @@ const ProjectGrid: React.FC<ProjectGridProps> = ({ activeFilters, onProjectClick
           <Card className="h-full hover:border-analyst-orange transition-colors duration-300 dark:bg-analyst-darkgrey border-analyst-lightgrey dark:border-analyst-black">
             <div className="h-40 bg-gray-200 dark:bg-gray-700 rounded-t-lg overflow-hidden">
               <img 
-                src={project.thumbnail} 
+                src={imageErrors[project.id] ? "/placeholder.svg" : project.thumbnail} 
                 alt={project.title}
                 className="w-full h-full object-cover"
+                onError={() => handleImageError(project.id)}
               />
             </div>
             <CardContent className="p-6">
@@ -190,6 +141,12 @@ const ProjectGrid: React.FC<ProjectGridProps> = ({ activeFilters, onProjectClick
           </Card>
         </motion.div>
       ))}
+      {filteredProjects.length === 0 && (
+        <div className="col-span-2 text-center py-10">
+          <Database className="h-12 w-12 mx-auto mb-4 text-analyst-orange/40" />
+          <p className="text-analyst-darkgrey/70 dark:text-analyst-lightgrey/70">No projects match your selected filters</p>
+        </div>
+      )}
     </div>
   );
 };

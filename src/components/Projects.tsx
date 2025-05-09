@@ -2,30 +2,23 @@
 import React from 'react';
 import ContentSection from './ContentSection';
 import { Button } from "@/components/ui/button";
-import { DownloadCloud } from 'lucide-react';
+import { ExternalLink } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const projectsData = [
   {
     id: "1",
-    title: "Marketing Analytics Dashboard",
+    title: "HR Analytics Dashboard",
     type: "data" as const,
-    content: "Interactive Power BI dashboard showing key marketing metrics and ROI analysis",
-    date: "2024-04-20"
+    content: "Comprehensive HR dashboard tracking employee metrics, performance and attrition trends",
+    date: "2024-04-15"
   },
   {
     id: "2",
-    title: "Sales Performance Visualization",
+    title: "Competitor Analysis Dashboard",
     type: "data" as const,
-    content: "Power BI visualization of quarterly sales performance across regions",
+    content: "Strategic analysis of market positions, performance metrics and revenue drivers",
     date: "2024-04-10"
-  },
-  {
-    id: "3",
-    title: "Customer Segmentation Report",
-    type: "document" as const,
-    content: "Detailed analysis of customer segments based on behavior patterns",
-    date: "2024-04-15"
   }
 ];
 
@@ -40,7 +33,7 @@ const Projects: React.FC = () => {
             asChild
           >
             <Link to="/projects">
-              <DownloadCloud className="mr-2 h-4 w-4" />
+              <ExternalLink className="mr-2 h-4 w-4" />
               View All Projects
             </Link>
           </Button>
